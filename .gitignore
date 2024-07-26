@@ -12,7 +12,7 @@ storybook.log*
 src/stories
 node_modules
 dist
-*.yarn
+
 dist-ssr
 *.local
 # Editor directories and files
