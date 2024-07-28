@@ -1,4 +1,6 @@
-import ModalVideo from "components/ModalVideo";
+"use client";
+
+import { ModalVideo } from "components/ModalVideo";
 import { NavPanel } from "components/NavPanel";
 
 import styles from "./header.module.scss";

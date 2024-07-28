@@ -15,7 +15,7 @@ interface NavPanelProps {
 
 export const NavPanel = ({ full }: NavPanelProps) => {
     const t = useTranslations("NavPanel");
-    const pathname: AppRoutes = usePathname();
+    const pathname = usePathname();
 
     const renderNav = (): ReactElement[] => {
         const links: typeof LINKS = full ? [...LINKS] : [...LINKS.slice(0, -1)];
@@ -24,7 +24,9 @@ export const NavPanel = ({ full }: NavPanelProps) => {
             <Link
                 key={id}
                 href={href}
-                className={classNames(styles.link, { [styles.linkActive]: pathname === href })}>
+                className={classNames(styles.link, {
+                    [styles.linkActive]: (pathname as AppRoutes) === href,
+                })}>
                 {t(title)}
             </Link>
         ));

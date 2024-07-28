@@ -10,5 +10,8 @@
     "About Us": "О нас",
     "Contact Us": "Связаться с нами",
     "Privacy Policy": "Авторские права"
+  },
+  "ModalVideo": {
+    "Button": "Видео о нас"
   }
 }

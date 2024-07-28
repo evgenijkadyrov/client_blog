@@ -1,0 +1,12 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.customButton {
+    height: $height_h56;
+
+    padding: $padding_p16 $padding_p48;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
