@@ -23,6 +23,50 @@
       "end": "|  May 23, 2022"
     },
     "heroDescription": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-    "buttonText": "Read more >"
+    "buttonText": "Read more >",
+    "Posts": {
+      "postsTitle": "Featured Posts",
+      "postAuthor": "By John Doe   l   May 23, 2022",
+      "postTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "postContent": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+    },
+    "AllPosts": {
+      "mainTitle": "All Posts",
+      "linkView": "View All"
+    },
+    "AboutUs": {
+      "subTitleFirst": "About us",
+      "titleFirst": "We are a community of content writers who share their learnings",
+      "descriptionFirst": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitleSecond": "Our Mission",
+      "titleSecond": "Creating valuable content for creatives all around the world",
+      "descriptionSecond": "orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "linkText": "Read More >"
+    },
+    "Category": {
+      "title": "Choose A Category",
+      "Cards": {
+        "business": {
+          "icon": "/business.svg",
+          "title": "Business",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        },
+        "startUp": {
+          "icon": "/startup.svg",
+          "title": "Startup",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        },
+        "economy": {
+          "icon": "/economy.svg",
+          "title": "Economy",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        },
+        "technology": {
+          "icon": "/technology.svg",
+          "title": "Technology",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+        }
+      }
+    }
   }
 }
