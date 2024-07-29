@@ -23,10 +23,8 @@ const LocaleLayout = async ({
             <body>
                 <NextIntlClientProvider messages={messages}>
                     <Header />
-                    {children}
+                    <main> {children}</main>
                 </NextIntlClientProvider>
-
-                {children}
             </body>
         </html>
     );

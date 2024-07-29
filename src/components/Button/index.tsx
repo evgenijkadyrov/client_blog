@@ -18,6 +18,7 @@ export const Button = ({
     text,
     color,
     bgcolor,
+
     type = ButtonTypes.button,
 }: CustomButtonProps) => (
     <button
