@@ -3,11 +3,36 @@
 
 .customButton {
     height: $height_h56;
-
     padding: $padding_p16 $padding_p48;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: $fontSize_f18;
+    font-weight: $fontWeight_700;
     z-index: 99;
+}
+.button-small {
+    width: $width_w150;
+    padding: $padding_p16 $padding_p16;
+}
+.button-medium {
+    padding: $padding_p16 $padding_p35;
+    width: $width_w200;
+}
+.button-large {
+    width: $width_w260;
+    padding: $padding_p16 $padding_p16;
+}
+.button-white {
+    background-color: $white;
+    color: $dark-blue;
+    &:hover {
+        background-color: $light-grey;
+    }
+}
+.button-yellow {
+    background-color: $yellow;
+    color: $dark-blue;
+    &:hover {
+        background-color: $yellow-hover;
+    }
 }

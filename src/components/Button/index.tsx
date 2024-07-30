@@ -1,31 +1,35 @@
+"use client";
+
+import { ReactNode } from "react";
+
 import styles from "./button.module.scss";
 
-export enum ButtonTypes {
-    button = "button",
-    submit = "submit",
-    reset = "reset",
-}
 interface CustomButtonProps {
-    onClick: () => void;
-    text: string;
-    color: string;
-    bgcolor: string;
-    type: ButtonTypes;
+    onClick?: () => void;
+    label?: string;
+    bgcolor?: string;
+    size?: "small" | "medium" | "large";
+    children?: ReactNode;
 }
 
 export const Button = ({
-    onClick,
-    text,
-    color,
+    label,
+    size = "medium",
     bgcolor,
+    children,
+    ...props
+}: CustomButtonProps) => {
+    const buttonSizeClass = styles[`button-${size}`];
+    const buttonColorClass = styles[`button-${bgcolor}`];
 
-    type = ButtonTypes.button,
-}: CustomButtonProps) => (
-    <button
-        onClick={onClick}
-        className={styles.customButton}
-        type={type}
-        style={{ backgroundColor: bgcolor, color }}>
-        {text}
-    </button>
-);
+    return (
+        <button
+            type="button"
+            className={`${styles.customButton} ${buttonSizeClass} ${buttonColorClass}`}
+            /* eslint-disable react/jsx-props-no-spreading */
+            {...props}>
+            {label}
+            {children}
+        </button>
+    );
+};

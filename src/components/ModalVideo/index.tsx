@@ -3,7 +3,7 @@
 import { KeyboardEvent, useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Button, ButtonTypes } from "components/Button";
+import { Button } from "components/Button";
 
 import "styles/colors.scss";
 import styles from "./modalVideo.module.scss";
@@ -23,13 +23,7 @@ export const ModalVideo = () => {
     return (
         <>
             <div className={styles.button}>
-                <Button
-                    onClick={handleClick}
-                    text={t("Button")}
-                    color="black"
-                    bgcolor="white"
-                    type={ButtonTypes.button}
-                />
+                <Button onClick={handleClick} label={t("Button")} bgcolor="white" size="large" />
             </div>
             {isModalOpen && (
                 <div
@@ -40,8 +34,8 @@ export const ModalVideo = () => {
                     className={styles.modalWrapper}>
                     <div className={styles.modalContent}>
                         <iframe
-                            width="560"
-                            height="315"
+                            width="850"
+                            height="500"
                             aria-label="Embedded YouTube Video"
                             src="https://www.youtube.com/embed/1rRD9uMF92o?si=HEq8w_N9KUgPsglo"
                             title="YouTube video player"

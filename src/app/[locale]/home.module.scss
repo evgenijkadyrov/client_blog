@@ -1,437 +1,153 @@
 @import "src/styles/colors";
 @import "src/styles/sizes";
 
-.top {
-    position: relative;
-    height: $height_h720;
-    margin-bottom: $margin_m64;
-}
-
-.topBackground {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: $dark-blue;
-    opacity: 0.3;
-
-    z-index: 2;
-
-    @media screen and (max-width: 480px) {
-        display: none;
-    }
-}
-
-.topInner {
-    position: relative;
-    padding: $padding_p128 0 0 $padding_p80;
-    max-width: $width_w800;
-
-    color: $white;
-
-    z-index: 3;
-
-    @media screen and (max-width: 568px) {
-        padding: $padding_p64 $padding_p20 $padding_p128;
-    }
-
-    @media screen and (max-width: 480px) {
-        padding-top: 60%;
-        padding-bottom: $padding_p10;
-    }
-}
-
-.imageFirst {
-    position: absolute;
-    left: 0;
-    background-image: url("../../assets/images/home/background.jpg");
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @media screen and (max-width: 768px) {
-        height: 70%;
-    }
-    @media screen and (max-width: 568px) {
-        height: 60%;
-    }
-    @media screen and (max-width: 480px) {
-        height: 50%;
-    }
-}
-
-.heroLabel {
-    margin-bottom: $margin_m24;
-
-    font-weight: $fontWeight_500;
-    letter-spacing: $letterSpacing_l02;
-    text-transform: uppercase;
-
-    span {
-        font-weight: $fontWeight_700;
-    }
-}
-
-.heroTitle {
-    margin-bottom: $margin_m24;
-
-    font-size: $fontSize_f56;
-
-    @media screen and (max-width: 650px) {
-        font-size: $fontSize_f48;
-    }
-
-    @media screen and (max-width: 568px) {
-        font-size: $fontSize_f36;
-    }
-
-    @media screen and (max-width: 480px) {
-        font-size: $fontSize_f30;
-        line-height: $lineHeight_lh30;
-    }
-
-    @media screen and (max-width: 350px) {
-        font-size: $fontSize_f25;
-    }
-}
-
-.heroCreatedAt {
-    margin-bottom: $margin_m15;
-
-    span {
-        color: $yellow;
-    }
-
-    &:last-child {
-        margin-bottom: $margin_m48;
-    }
-}
-
-.button {
-    height: $height_h56;
-    width: 208px;
-    margin-top: $margin_m30;
-    padding: $padding_p16 $padding_p48;
-    border: none;
-    cursor: pointer;
-    font-size: $fontSize_f18;
-    font-weight: $fontWeight_700;
-    background-color: $yellow;
-    z-index: 99;
-
-    &:hover {
-        background-color: $yellow-hover;
-    }
-}
+//.button {
+//    height: $height_h56;
+//    width: 208px;
+//    margin-top: $margin_m30;
+//    padding: $padding_p16 $padding_p48;
+//    border: none;
+//    cursor: pointer;
+//    font-size: $fontSize_f18;
+//    font-weight: $fontWeight_700;
+//    background-color: $yellow;
+//    z-index: 99;
+//
+//    &:hover {
+//        background-color: $yellow-hover;
+//    }
+//}
 
 .link {
     text-decoration: none;
     cursor: pointer;
     color: $dark-blue;
 }
-.posts {
-    padding: 64px 0 128px;
+
+.aboutContainer {
+    margin: 80px;
+}
+.category {
+    margin: 64px 80px;
+}
+
+.wrapperWhyWeStarted {
+    margin: 64px 80px;
+}
+
+.listOfAuthors {
+    margin: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    &Title {
+        margin-bottom: 48px;
+    }
+}
+.card {
+    width: 296px;
+    height: 324px;
+    padding: 40px 20px;
 
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 
-    &Title {
-        margin-bottom: 32px;
-    }
+    background-color: $extra-light-grey;
 
-    @media screen and (max-width: 1150px) {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.featuredPost {
-    &Content {
-        padding: 32px;
-        border: 1px solid $extra-light-grey;
-        display: flex;
-        flex-direction: column;
-        margin-right: 32px;
-
-        @media screen and (max-width: 1150px) {
-            margin-right: 0;
-        }
-
-        @media screen and (max-width: 800px) {
-            border: none;
-        }
-
-        @media screen and (max-width: 450px) {
-            padding: 32px 0;
-        }
-    }
-
-    &Author {
-        max-width: 670px;
-        margin: 32px 0 16px;
-    }
-
-    &Title {
-        max-width: 670px;
-        margin-bottom: 16px;
-    }
-
-    &Text {
-        max-width: 570px;
-        margin-bottom: 32px;
-    }
-
-    &Image {
-        background-image: url("../../assets/images/home/white-concrete-building-1838640.jpg");
-        width: 669px;
-        height: 352px;
-        margin: 32px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        @media screen and (max-width: 768px) {
-            height: 70%;
-        }
-        @media screen and (max-width: 568px) {
-            height: 60%;
-        }
-        @media screen and (max-width: 480px) {
-            height: 50%;
-        }
-    }
-
-    @media screen and (max-width: 1150px) {
-        margin-bottom: 30px;
-    }
-}
-.allPosts {
-    &Header {
-        margin-bottom: 32px;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &Link {
-        color: $purple;
-        text-decoration: none;
-        font-weight: 500;
-
-        cursor: pointer;
-
-        transition: all 0.3s linear;
-
-        &::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 2px;
-
-            background: $purple;
-            transition: all 0.3s linear;
-        }
-
-        &:hover::after {
-            width: 100%;
-        }
-    }
-
-    &Column {
-        display: flex;
-        flex-direction: column;
-    }
-}
-.post {
-    padding: 25px 150px 25px 30px;
     cursor: pointer;
-
-    @media screen and (max-width: 1300px) {
-        padding-right: 50px;
-    }
-
-    @media screen and (max-width: 1150px) {
-        padding-right: 0;
-    }
-
-    @media screen and (max-width: 450px) {
-        padding-left: 0;
-    }
-
     transition: all 0.3s linear;
 
     &:hover {
         background-color: $milk;
     }
+}
 
-    &Author {
-        margin-bottom: 8px;
+.socials {
+    a {
+        margin-right: 15px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
-.blocks {
-    margin-top: 64px;
-    height: 25px;
+
+.imageWrapper {
+    margin-bottom: 20px;
+}
+.name {
+}
+.role {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    color: $dark-grey;
+}
+.wrapperFeatured {
+    margin: 64px 80px;
+}
+.logos {
+    padding: 32px 0 96px;
 
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-    @media screen and (max-width: 1150px) {
-        margin-top: 0;
-    }
-}
+    &Title {
+        margin-right: 85px;
 
-.whiteBlock {
-    width: 20%;
+        color: $light-grey;
 
-    background-color: $white;
-}
+        @media screen and (max-width: 1350px) {
+            margin-bottom: 15px;
+        }
 
-.yellowBlock {
-    width: 50%;
-
-    background-color: $yellow;
-}
-
-.purpleBlock {
-    width: 30%;
-
-    background-color: $purple;
-}
-.aboutContainer {
-    margin: 80px;
-}
-.articleWrapper {
-    display: flex;
-    justify-content: space-around;
-
-    gap: 60px;
-}
-.about {
-    padding: 96px;
-    margin-bottom: 64px;
-    background-color: $extra-light-purple;
-
-    @media screen and (max-width: 568px) {
-        padding: 94px 40px;
+        @media screen and (max-width: 475px) {
+            margin-right: 40px;
+        }
     }
 
-    @media screen and (max-width: 480px) {
-        padding: 94px 10px;
-    }
-
-    &Article {
-        width: 516px;
-        //margin-right: 30px;
+    &Item {
+        margin-right: 75px;
 
         &:last-child {
             margin-right: 0;
         }
 
-        @media screen and (max-width: 550px) {
-            margin-right: 0;
+        @media screen and (max-width: 1350px) {
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 730px) {
+            &:last-child {
+                margin-right: 75px;
+            }
+        }
+
+        @media screen and (max-width: 475px) {
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 40px;
+            }
         }
     }
 
-    &SubTitle {
-        margin-bottom: 24px;
-
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-
-    &Title {
-        margin-bottom: 16px;
-    }
-
-    &Description {
-        color: $dark-grey;
-    }
-
-    &Link {
-        color: $purple;
-
-        font-weight: 500;
-
-        cursor: pointer;
-
-        transition: all 0.3s linear;
-
-        &::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 2px;
-
-            background: $purple;
-            transition: all 0.3s linear;
-        }
-
-        &:hover::after {
-            width: 8%;
-        }
+    @media screen and (max-width: 1350px) {
+        justify-content: space-around;
     }
 }
-.category {
+.testimonials {
     margin: 64px 80px;
-    &Title {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 48px;
-    }
-    &Row {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-    &Block {
-        width: 296px;
-        height: 228px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 32px;
-        border: solid 1px $extra-light-grey;
-        &Icon {
-            margin-bottom: 16px;
-
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background-color: $milk;
-            border-radius: 10px;
-
-            transition: all 0.3s linear;
-
-            &:hover {
-                background-color: $yellow;
-                border-color: $yellow;
-
-                .iconWrapper {
-                    background-color: $white;
-                }
-            }
-
-            @media screen and (max-width: 1350px) {
-                margin-bottom: 30px;
-            }
-        }
-        &Title {
-            margin-bottom: 4px;
-        }
-        &Description {
-        }
-    }
 }
