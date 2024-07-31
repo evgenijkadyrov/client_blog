@@ -5,7 +5,7 @@ module.exports = {
     "airbnb-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-      "next",
+    "next",
     "prettier",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
@@ -15,6 +15,7 @@ module.exports = {
       files: ["*.ts", "*.tsx", "*.d.ts"],
       extends: [
         "plugin:@typescript-eslint/recommended",
+
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
       ],
     },
@@ -53,6 +54,7 @@ module.exports = {
       },
     ],
     "react-refresh/only-export-components": "off",
+    "react/button-has-type": "off",
     "react-hooks/exhaustive-deps": "off",
     "no-floating-promise/no-floating-promise": "off",
     "@typescript-eslint/no-floating-promises": "off",

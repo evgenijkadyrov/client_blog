@@ -1,0 +1,160 @@
+@import "src/styles/colors.scss";
+.wrapperTestimonials {
+    background-color: $milk;
+    display: flex;
+
+    height: 464px;
+}
+.testimonials {
+    position: relative;
+    padding-top: 92px;
+    padding-left: 112px;
+    min-width: 462px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 90px;
+
+    &SubTitle {
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        letter-spacing: 3px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &Title {
+        margin-bottom: 16px;
+    }
+    &Description {
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        height: 310px;
+        width: 2px;
+        right: -90px;
+        background-color: $light-grey;
+    }
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    min-width: 630px;
+    padding: 90px;
+    position: relative;
+
+    &Text {
+        margin-bottom: 120px;
+    }
+    &Item {
+        height: 100%;
+        display: none;
+
+        transition: opacity 0.3s ease;
+
+        &Active {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+    }
+    .authorItem {
+        display: flex;
+
+        &Avatar {
+            margin-right: 16px;
+            width: 48px;
+            height: 48px;
+        }
+        &Info {
+            display: flex;
+
+            flex-direction: column;
+            &Name {
+            }
+            &City {
+            }
+        }
+    }
+    .controls {
+        position: absolute;
+        display: flex;
+        gap: 5px;
+        right: 10%;
+        bottom: 10%;
+
+        &Button {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            background-color: $white;
+
+            span {
+                border-color: $dark-blue;
+
+                &::after {
+                    background-color: $dark-blue;
+                }
+            }
+
+            cursor: pointer;
+            transition: all 0.3s linear;
+
+            &Prev {
+                margin-right: 16px;
+                padding-left: 20px;
+
+                span {
+                    align-self: flex-start;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            &Next {
+                padding-right: 20px;
+
+                span {
+                    align-self: flex-end;
+                    transform: rotate(135deg);
+                }
+            }
+
+            &:hover {
+                background-color: $dark-blue;
+
+                span {
+                    border-color: $white;
+
+                    &::after {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .arrow {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid;
+        border-left: 1px solid;
+        transform-origin: center;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 25px;
+            transform: rotate(-45deg) translate(8px, 4px);
+        }
+    }
+}
