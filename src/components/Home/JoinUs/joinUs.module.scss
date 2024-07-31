@@ -1,0 +1,16 @@
+@import "src/styles/sizes";
+.inner {
+    padding: $padding_p64 0 $padding_p128;
+    max-width: $width_w500;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.title {
+    margin-bottom: $margin_m15;
+}
+
+.description {
+    margin-bottom: $margin_m30;
+}

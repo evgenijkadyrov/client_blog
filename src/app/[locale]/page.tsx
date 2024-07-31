@@ -1,13 +1,14 @@
 import { AUTHORS } from "constants/authors";
 import { LOGOS } from "constants/logos";
+import { Link } from "navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { AboutUs } from "components/Home/About";
 import { CategoryHome } from "components/Home/Category";
 import { FeaturedPosts } from "components/Home/FeaturedPosts";
 import { HomeHero } from "components/Home/HomeHero";
+import { JoinUsHome } from "components/Home/JoinUs";
 import { SpecialPost } from "components/Home/SpecialPost";
 import { Testimonials } from "components/Testimonials";
 
@@ -79,6 +80,9 @@ const Page = () => {
             </div>
             <div className={styles.testimonials}>
                 <Testimonials />
+            </div>
+            <div className={styles.testimonials}>
+                <JoinUsHome />
             </div>
         </>
     );

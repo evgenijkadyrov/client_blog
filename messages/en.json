@@ -82,5 +82,10 @@
       "title": "What people say about our blog",
       "description": "Placeholder text for the testimonial section"
     }
+  },
+  "JoinUs": {
+    "title": "Join our team to be a part of our story",
+    "description": "Updated description here ",
+    "buttonText": "Join now"
   }
 }
