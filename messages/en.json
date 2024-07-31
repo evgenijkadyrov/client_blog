@@ -87,5 +87,12 @@
     "title": "Join our team to be a part of our story",
     "description": "Updated description here ",
     "buttonText": "Join now"
+  },
+  "Footer": {
+    "title": "Subscribe to our news letter to get latest updates and news",
+    "buttonSubscribe": "Subscribe",
+    "formEmail": "Enter your email",
+    "label": "Change language",
+    "locale": "{locale, select, be {b🇪 Belarus} en {🇺🇸 English} other {Unknown}}"
   }
 }

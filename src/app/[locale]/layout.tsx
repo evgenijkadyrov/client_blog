@@ -3,6 +3,7 @@ import { Sen } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
+import { Footer } from "components/Footer";
 import Header from "components/Header";
 
 const sen = Sen({
@@ -24,6 +25,7 @@ const LocaleLayout = async ({
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     <main> {children}</main>
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>

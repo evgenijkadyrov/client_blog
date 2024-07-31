@@ -1,0 +1,38 @@
+@import "src/styles/sizes";
+@import "src/styles/colors";
+
+.label {
+    position: relative;
+}
+
+.selectContainer {
+    position: relative;
+}
+
+.select {
+    appearance: none;
+    background: transparent;
+    width: $width_w100;
+    color: $white;
+    padding: $padding_p02 $padding_p02 $padding_p02 $padding_p05;
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    option {
+        background-color: $light-grey;
+        color: $dark-blue;
+    }
+}
+
+.span {
+    pointer-events: none;
+    position: absolute;
+
+    right: $position_p40;
+    top: 25%;
+    transform: translateY(-50%);
+    color: $white;
+    font-size: $fontSize_f16;
+}
