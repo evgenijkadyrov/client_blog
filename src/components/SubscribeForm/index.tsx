@@ -31,7 +31,6 @@ export const SubscribeForm = () => {
     const handleSendEmail = (e: SyntheticEvent) => {
         e.preventDefault();
         validateEmail();
-        console.log(email);
     };
 
     const onChangeHandler = (e: SyntheticEvent<HTMLInputElement>) => {

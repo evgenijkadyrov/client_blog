@@ -1,5 +1,5 @@
 import { AppRoutes } from "constants/routerPath";
-import Link from "next/link";
+import { Link } from "navigation";
 import { useTranslations } from "next-intl";
 
 import { Button } from "components/Button";
@@ -13,7 +13,7 @@ export const JoinUsHome = () => {
             <h2 className={styles.title}>{t("title")}</h2>
             <p className={styles.description}>{t("description")}</p>
             <Button bgcolor="yellow">
-                <Link href={`/${AppRoutes.CONTACT}`}>{t("buttonText")}</Link>
+                <Link href={AppRoutes.CONTACT}>{t("buttonText")}</Link>
             </Button>
         </section>
     );

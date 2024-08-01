@@ -1,6 +1,6 @@
 import React from "react";
 import { AppRoutes } from "constants/routerPath";
-import Link from "next/link";
+import { Link } from "navigation";
 import { useTranslations } from "next-intl";
 
 import { Button } from "components/Button";
@@ -17,7 +17,7 @@ export const SpecialPost = () => {
                 <h1 className={styles.whyWeStartedTitle}>{t("WhyWeStarted.title")}</h1>
                 <p className={styles.whyWeStartedText}>{t("WhyWeStarted.description")}</p>
                 <Button size="large" bgcolor="yellow">
-                    <Link href={`/${AppRoutes.ABOUT}`} className={styles.link}>
+                    <Link href={AppRoutes.ABOUT} className={styles.link}>
                         {t("WhyWeStarted.buttonText")}
                     </Link>
                 </Button>

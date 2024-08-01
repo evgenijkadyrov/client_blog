@@ -1,6 +1,6 @@
 import React from "react";
 import { AppRoutes } from "constants/routerPath";
-import Link from "next/link";
+import { Link } from "navigation";
 import { useTranslations } from "next-intl";
 
 import styles from "./aboutUs.module.scss";

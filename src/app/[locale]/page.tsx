@@ -1,10 +1,12 @@
+import React from "react";
 import { AUTHORS } from "constants/authors";
-import { LOGOS } from "constants/logos";
-import { Link } from "navigation";
-import Image from "next/image";
+import { getRandomElements } from "helpers/randomAuthorList";
 import { useTranslations } from "next-intl";
 
+import Container from "components/Container";
+import FeaturedIn from "components/FeaturedIn";
 import { AboutUs } from "components/Home/About";
+import { AuthorsBlock } from "components/Home/Authors";
 import { CategoryHome } from "components/Home/Category";
 import { FeaturedPosts } from "components/Home/FeaturedPosts";
 import { HomeHero } from "components/Home/HomeHero";
@@ -17,73 +19,36 @@ import styles from "./home.module.scss";
 
 const Page = () => {
     const t = useTranslations("HomeHero");
+    const currentAuthors = getRandomElements(AUTHORS, 4);
 
     return (
         <>
             <HomeHero />
-
-            <div style={{ margin: "80px" }}>
+            <Container>
                 <FeaturedPosts />
-            </div>
+            </Container>
             <div className={styles.aboutContainer}>
                 <AboutUs />
             </div>
-            <div className={styles.category}>
+            <Container>
+                <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
                 <CategoryHome />
-            </div>
-            <div className={styles.wrapperWhyWeStarted}>
+            </Container>
+            <Container>
                 <SpecialPost />
-            </div>
-            <div>
-                <section className={styles.listOfAuthors}>
-                    <h2 className={styles.listOfAuthorsTitle}>{t("ListOfAuthor.title")}</h2>
-                    <div className={styles.listOfAuthorsBlock}>
-                        {AUTHORS.map(({ img, name, role, socials }) => (
-                            <div className={styles.card} key={name}>
-                                <div className={styles.imageWrapper}>
-                                    <Image src={img} alt={name} loading="lazy" />
-                                </div>
-                                <h3 className={styles.name}>{name}</h3>
-                                <p className={styles.role}>{role}</p>
-                                <div className={styles.socials}>
-                                    {socials.map(({ id, href, icon }) => (
-                                        <Link key={id} href={href}>
-                                            <Image
-                                                src={icon.darkIcon}
-                                                alt={icon.alt}
-                                                loading="lazy"
-                                            />
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </div>
-            <div className={styles.wrapperFeatured}>
-                <div className={styles.logos}>
-                    <div className={styles.logosTitle}>
-                        <p>We are</p>
-                        <h4>Featured in</h4>
-                    </div>
-                    {LOGOS.map(({ id, img, alt }) => (
-                        <Image
-                            key={id}
-                            src={img}
-                            alt={alt}
-                            className={styles.logosItem}
-                            loading="lazy"
-                        />
-                    ))}
-                </div>
-            </div>
-            <div className={styles.testimonials}>
+            </Container>
+            <Container>
+                <AuthorsBlock authors={currentAuthors} />
+            </Container>
+            <Container>
+                <FeaturedIn />
+            </Container>
+            <Container>
                 <Testimonials />
-            </div>
-            <div className={styles.testimonials}>
+            </Container>
+            <Container>
                 <JoinUsHome />
-            </div>
+            </Container>
         </>
     );
 };

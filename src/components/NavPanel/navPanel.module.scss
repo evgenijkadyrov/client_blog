@@ -1,4 +1,5 @@
 @import "src/styles/colors";
+@import "src/styles/sizes";
 
 .nav {
     display: flex;
@@ -18,8 +19,8 @@
 
         height: 100%;
         width: 100%;
-        gap: 20px;
-        padding: 20px 0;
+        gap: $margin_m20;
+        padding: $padding_p20 0;
         flex-direction: column;
 
         background-color: $dark-blue;
@@ -32,8 +33,8 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: $width_w40;
+    height: $height_h40;
     cursor: pointer;
     z-index: 1;
 
@@ -52,18 +53,18 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: $height_h03;
     background-color: $white;
 }
 
 .menuBtn > span::before {
     content: "";
-    top: -8px;
+    top: -$margin_m08;
 }
 
 .menuBtn > span::after {
     content: "";
-    top: 8px;
+    top: $margin_m08;
 }
 
 #menuToggle {
@@ -87,18 +88,18 @@
 
 #menuToggle:checked ~ .nav {
     visibility: visible;
-    top: 80px;
+    top: $height_h80;
 }
 
 .homeLink {
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: $fontWeight_700;
+    font-size: $fontSize_f25;
     color: $white;
     text-decoration: none;
     cursor: pointer;
 
     @media screen and (max-width: 400px) {
-        font-size: 20px;
+        font-size: $fontSize_f20;
     }
 }
 
@@ -115,10 +116,10 @@
 }
 
 .link {
-    margin-right: 25px;
+    margin-right: $margin_m24;
     color: $white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: $fontSize_f18;
 
     transition: all 0.3s linear;
 
@@ -126,7 +127,7 @@
         content: "";
         display: block;
         width: 0;
-        height: 2px;
+        height: $height_h02;
 
         background: $white;
         transition: all 0.3s linear;

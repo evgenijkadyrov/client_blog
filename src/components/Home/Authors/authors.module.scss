@@ -1,0 +1,19 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+.listOfAuthors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: $gap_g32;
+    }
+    &Title {
+        margin-bottom: $margin_m48;
+    }
+}

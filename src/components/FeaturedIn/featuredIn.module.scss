@@ -1,0 +1,53 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+.logos {
+    padding: $padding_p32 0 $padding_p96;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &Title {
+        margin-right: $margin_m85;
+
+        color: $light-grey;
+
+        @media screen and (max-width: 1350px) {
+            margin-bottom: $margin_m15;
+        }
+
+        @media screen and (max-width: 475px) {
+            margin-right: $margin_m40;
+        }
+    }
+
+    &Item {
+        margin-right: $margin_m75;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 1350px) {
+            margin-bottom: $margin_m15;
+        }
+
+        @media screen and (max-width: 730px) {
+            &:last-child {
+                margin-right: $margin_m75;
+            }
+        }
+
+        @media screen and (max-width: 475px) {
+            margin-right: $margin_m40;
+
+            &:last-child {
+                margin-right: $margin_m40;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1350px) {
+        justify-content: space-around;
+    }
+}
