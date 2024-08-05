@@ -16,7 +16,6 @@
     }
 
     &Icon {
-        margin-bottom: $margin_m16;
         width: $width_w50;
         height: $height_h50;
         display: flex;
@@ -45,5 +44,12 @@
     }
 
     &Description {
+    }
+    &Short {
+        flex-direction: row;
+        height: 96px;
+        padding: $padding_p32;
+        gap: 16px;
+        align-items: center;
     }
 }
