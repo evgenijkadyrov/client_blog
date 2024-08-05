@@ -1,0 +1,95 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.post {
+    display: flex;
+    align-items: center;
+    gap: $gap_g50;
+
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.postContent {
+    max-width: $width_w570;
+}
+
+.postCategory {
+    margin-bottom: $margin_m20;
+
+    font-weight: $fontWeight_500;
+    text-transform: uppercase;
+    letter-spacing: $letterSpacing_l02;
+
+    color: $purple;
+}
+
+.postColumn {
+    max-width: $width_w400;
+    height: $height_h520;
+    flex-direction: column;
+    gap: $gap_g10;
+}
+
+.postColumn h2 {
+    font-size: $fontSize_f28;
+    line-height: $lineHeight_lh30;
+}
+
+.postColumn h5 {
+    font-size: $fontSize_f16;
+}
+
+.postColumn img {
+    width: 100%;
+    height: $height_h250;
+}
+
+.postColumn div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $gap_g15;
+}
+
+.postImage {
+    width: 490px;
+    height: 320px;
+}
+
+.postImage.postImageSmall {
+    width: $width_w300;
+    height: $height_h300;
+}
+
+@media screen and (max-width: 550px) {
+    .postImage {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .postImage {
+        object-fit: contain;
+        height: auto;
+    }
+}
+
+.postTitle {
+    margin-bottom: 16px;
+}
+
+.postText {
+    color: $dark-grey;
+}
+
+.post:hover {
+    background-color: $milk;
+}
+
+@media screen and (max-width: 1220px) {
+    .post {
+        flex-direction: column-reverse;
+        gap: $gap_g20;
+    }
+}

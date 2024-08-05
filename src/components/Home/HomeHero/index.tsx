@@ -33,7 +33,6 @@ export const HomeHero = () => {
                     </Button>
                 </div>
             </div>
-            <div />
         </section>
     );
 };

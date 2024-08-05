@@ -16,19 +16,19 @@
   "HomeHero": {
     "heroLabel": "Posted on ",
     "heroLabelSpan": "startup",
-    "heroTitle": "Step-by-step guide to choosing great font pairs",
+    "heroTitle": "The Art of Pairing Fonts: A Comprehensive Guide",
     "heroCreatedAt": {
       "begin": "By ",
-      "colorSpan": "James West ",
-      "end": "|  May 23, 2022"
+      "colorSpan": "Natalie Chen ",
+      "end": "|  May 23, 2024"
     },
-    "heroDescription": "Elevate your design projects with the perfect font combinations. Explore tips and tricks for selecting harmonious font pairs that enhance readability and visual appeal.",
+    "heroDescription": "Choosing the right font combinations is crucial for creating visually appealing designs. Understanding how different fonts work together can elevate your project and make it stand out.",
     "buttonText": "Read more >",
     "Posts": {
       "postsTitle": "Featured Posts",
       "postAuthor": "By John Doe   l   May 23, 2022",
-      "postTitle": "The Art of Mindful Productivity: Balancing Work and Well-being",
-      "postContent": "Discover the secrets to enhancing productivity while prioritizing your well-being. Learn how to strike a balance between work demands and self-care for a fulfilling and sustainable lifestyle."
+      "postTitle": "Navigating Cybersecurity Challenges in the Digital Age",
+      "postContent": "Cybersecurity threats pose significant risks to businesses in the digital era. Learn how to implement robust cybersecurity measures to protect sensitive data and safeguard against cyber attacks."
     },
     "AllPosts": {
       "mainTitle": "All Posts",
@@ -94,5 +94,65 @@
     "formEmail": "Enter your email",
     "label": "Change language",
     "locale": "{locale, select, be {b🇪 Belarus} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Posts": {
+    "postSubtitle": "Featured Posts",
+    "postTitle": "The Art of Mindful Productivity: Balancing Work and Well-being",
+    "postAuthor": "By John Doe   l   May 23, 2022",
+    "postContent": "Discover the secrets to enhancing productivity while prioritizing your well-being. Learn how to strike a balance between work demands and self-care for a fulfilling and sustainable lifestyle.",
+    "buttonText": "Read more >",
+    "postsBlockTitle": "All posts",
+    "allCategories": "All categories"
+  },
+  "Post": {
+    "postsTitle": "What to read next"
+  },
+  "About": {
+    "top": {
+      "subTitle": "about us",
+      "title": "We are a team of content writers who share their learnings",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "stats": {
+      "blogs": "Blogs Published",
+      "views": "Views on Finsweet",
+      "users": "Total active Users"
+    },
+    "misionVision": {
+      "block_1": {
+        "supTitle": "Our Mision",
+        "title": "Creating valuable content for creatives all around the world",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      },
+      "block_2": {
+        "supTitle": "Our Vision",
+        "title": "A platform that empowers individuals to improve",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      }
+    },
+    "description": {
+      "block_1": {
+        "subTitle": "Our team of creatives",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      },
+      "block_2": {
+        "subTitle": "Why we started this Blog",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      }
+    }
+  },
+  "Author": {
+    "top": {
+      "title": {
+        "firstPart": "Hey there, I’m ",
+        "secondPart": " and welcome to my Blog"
+      }
+    },
+    "posts": {
+      "title": "My Posts",
+      "secondTitle": "No Posts"
+    }
   }
 }

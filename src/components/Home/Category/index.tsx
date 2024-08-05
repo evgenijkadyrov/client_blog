@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslations } from "next-intl";
 
 import { CategoryItem } from "./CategoryItem";
 
@@ -12,17 +11,12 @@ const keysCategory = [
     "Category.Cards.technology",
 ];
 
-export const CategoryHome = () => {
-    const t = useTranslations("HomeHero");
-
-    return (
-        <div className={styles.category}>
-            <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
-            <section className={styles.categoryRow}>
-                {keysCategory.map((category) => (
-                    <CategoryItem key={category} category={category} />
-                ))}
-            </section>
-        </div>
-    );
-};
+export const CategoryHome = () => (
+    <div className={styles.category}>
+        <section className={styles.categoryRow}>
+            {keysCategory.map((category) => (
+                <CategoryItem key={category} category={category} />
+            ))}
+        </section>
+    </div>
+);

@@ -1,23 +1,6 @@
 @import "src/styles/colors";
 @import "src/styles/sizes";
 
-//.button {
-//    height: $height_h56;
-//    width: 208px;
-//    margin-top: $margin_m30;
-//    padding: $padding_p16 $padding_p48;
-//    border: none;
-//    cursor: pointer;
-//    font-size: $fontSize_f18;
-//    font-weight: $fontWeight_700;
-//    background-color: $yellow;
-//    z-index: 99;
-//
-//    &:hover {
-//        background-color: $yellow-hover;
-//    }
-//}
-
 .link {
     text-decoration: none;
     cursor: pointer;
@@ -27,127 +10,9 @@
 .aboutContainer {
     margin: 80px;
 }
-.category {
-    margin: 64px 80px;
-}
 
-.wrapperWhyWeStarted {
-    margin: 64px 80px;
-}
-
-.listOfAuthors {
-    margin: 64px 80px;
+.categoryTitle {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    &Block {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-    }
-    &Title {
-        margin-bottom: 48px;
-    }
-}
-.card {
-    width: 296px;
-    height: 324px;
-    padding: 40px 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: $extra-light-grey;
-
-    cursor: pointer;
-    transition: all 0.3s linear;
-
-    &:hover {
-        background-color: $milk;
-    }
-}
-
-.socials {
-    a {
-        margin-right: 15px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-.imageWrapper {
-    margin-bottom: 20px;
-}
-.name {
-}
-.role {
-    margin-bottom: 20px;
-
-    font-size: 14px;
-
-    color: $dark-grey;
-}
-.wrapperFeatured {
-    margin: 64px 80px;
-}
-.logos {
-    padding: 32px 0 96px;
-
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-
-    &Title {
-        margin-right: 85px;
-
-        color: $light-grey;
-
-        @media screen and (max-width: 1350px) {
-            margin-bottom: 15px;
-        }
-
-        @media screen and (max-width: 475px) {
-            margin-right: 40px;
-        }
-    }
-
-    &Item {
-        margin-right: 75px;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        @media screen and (max-width: 1350px) {
-            margin-bottom: 15px;
-        }
-
-        @media screen and (max-width: 730px) {
-            &:last-child {
-                margin-right: 75px;
-            }
-        }
-
-        @media screen and (max-width: 475px) {
-            margin-right: 40px;
-
-            &:last-child {
-                margin-right: 40px;
-            }
-        }
-    }
-
-    @media screen and (max-width: 1350px) {
-        justify-content: space-around;
-    }
-}
-.testimonials {
-    margin: 64px 80px;
+    margin-bottom: $margin_m48;
 }

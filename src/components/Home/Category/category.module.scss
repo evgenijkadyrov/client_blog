@@ -2,12 +2,6 @@
 @import "src/styles/sizes";
 
 .category {
-    &Title {
-        display: flex;
-        justify-content: center;
-        margin-bottom: $margin_m48;
-    }
-
     &Row {
         display: flex;
         justify-content: space-between;

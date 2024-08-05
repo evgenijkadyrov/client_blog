@@ -1,50 +1,51 @@
-@import "src/styles/colors.scss";
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
 .wrapperTestimonials {
     background-color: $milk;
     display: flex;
-
-    height: 464px;
+    height: $height_h450;
 }
 .testimonials {
     position: relative;
-    padding-top: 92px;
-    padding-left: 112px;
-    min-width: 462px;
+    padding-top: $padding_p96;
+    padding-left: $padding_p112;
+    min-width: $width_w450;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 90px;
+    margin-right: $margin_m85;
 
     &SubTitle {
         text-transform: uppercase;
-        margin-bottom: 12px;
-        letter-spacing: 3px;
-        font-size: 16px;
-        font-weight: 600;
+        margin-bottom: $margin_m10;
+        letter-spacing: $letterSpacing_l03;
+        font-size: $fontSize_f16;
+        font-weight: $fontWeight_600;
     }
     &Title {
-        margin-bottom: 16px;
+        margin-bottom: $margin_m10;
     }
     &Description {
     }
     &:after {
         position: absolute;
         content: "";
-        height: 310px;
-        width: 2px;
-        right: -90px;
+        height: $height_h300;
+        width: $width_w02;
+        right: -$position_p90;
         background-color: $light-grey;
     }
 }
 .review {
     display: flex;
     flex-direction: column;
-    min-width: 630px;
-    padding: 90px;
+    min-width: $width_w630;
+    padding: $padding_p90;
     position: relative;
 
     &Text {
-        margin-bottom: 120px;
+        margin-bottom: $margin_m120;
     }
     &Item {
         height: 100%;
@@ -65,9 +66,9 @@
         display: flex;
 
         &Avatar {
-            margin-right: 16px;
-            width: 48px;
-            height: 48px;
+            margin-right: $margin_m15;
+            width: $width_w50;
+            height: $height_h50;
         }
         &Info {
             display: flex;
@@ -82,7 +83,7 @@
     .controls {
         position: absolute;
         display: flex;
-        gap: 5px;
+        gap: $gap_g05;
         right: 10%;
         bottom: 10%;
 
@@ -91,8 +92,8 @@
             justify-content: center;
             flex-direction: column;
             border: none;
-            width: 60px;
-            height: 60px;
+            width: $width_w60;
+            height: $height_h60;
             border-radius: 50%;
 
             background-color: $white;
@@ -109,8 +110,8 @@
             transition: all 0.3s linear;
 
             &Prev {
-                margin-right: 16px;
-                padding-left: 20px;
+                margin-right: $margin_m15;
+                padding-left: $padding_p20;
 
                 span {
                     align-self: flex-start;
@@ -119,7 +120,7 @@
             }
 
             &Next {
-                padding-right: 20px;
+                padding-right: $padding_p20;
 
                 span {
                     align-self: flex-end;
@@ -143,17 +144,17 @@
 
     .arrow {
         display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-top: 1px solid;
-        border-left: 1px solid;
+        width: $width_w10;
+        height: $height_h10;
+        border-top: $border_b01 solid;
+        border-left: $border_b01 solid;
         transform-origin: center;
 
         &::after {
             content: "";
             display: block;
-            width: 2px;
-            height: 25px;
+            width: $width_w02;
+            height: $height_h25;
             transform: rotate(-45deg) translate(8px, 4px);
         }
     }

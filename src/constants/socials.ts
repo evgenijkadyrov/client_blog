@@ -20,7 +20,7 @@ const BlogSocialPages = {
     INSTAGRAM: "https://www.instagram.com/",
     LINKEDIN: "https://www.linkedin.com/",
 };
-interface SocialsIcons {
+export interface SocialsIcons {
     id: number;
     darkIcon: string;
     lightIcon: string;
