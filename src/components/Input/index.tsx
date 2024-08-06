@@ -1,14 +1,23 @@
-import { FC, InputHTMLAttributes } from "react";
+import { forwardRef, PropsWithRef } from "react";
 import classNames from "classnames";
 
 import styles from "./input.module.scss";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
-interface CustomInputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends PropsWithRef<IntrinsicElements["input"]> {
     className?: string;
+    errorMessage?: string | undefined;
 }
 
-export const CustomInput: FC<CustomInputProps> = ({ className, ...props }) => {
-    const inputClasses = classNames(styles.input, className);
-
-    return <input className={inputClasses} {...props} />;
-};
+export const CustomInput = forwardRef<HTMLInputElement, InputProps>(
+    ({ className, errorMessage, ...props }, ref) => {
+        const inputClasses = classNames(styles.input, className);
+        return (
+            <>
+                <input className={inputClasses} {...props} ref={ref} />
+                {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+            </>
+        );
+    }
+);
+CustomInput.displayName = "CustomInput";

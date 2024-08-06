@@ -40,3 +40,10 @@
         background-color: $yellow-hover;
     }
 }
+.button-disabled {
+    background-color: $light-grey;
+    cursor: default;
+    &:hover {
+        background-color: $light-grey;
+    }
+}

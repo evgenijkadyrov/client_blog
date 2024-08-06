@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "constants/contactInfo";
 import { useTranslations } from "next-intl";
 
 import { ContactForm } from "components/ContactForm";
@@ -22,9 +23,9 @@ const Contact = () => {
                         <div className={styles.blockHeader}>
                             <p>{t("header.block_1.title")}</p>
                         </div>
-                        <div className={styles.blockContent}>
-                            <h5 className={styles.blockTitle}>{t("header.block_1.days")}</h5>
-                            <h5 className={styles.blockTitle}>{t("header.block_1.time")}</h5>
+                        <div>
+                            <h5>{t("header.block_1.days")}</h5>
+                            <h5>{t("header.block_1.time")}</h5>
                             <p className={styles.blockText}>{t("header.block_1.description")}</p>
                         </div>
                     </div>
@@ -32,9 +33,9 @@ const Contact = () => {
                         <div className={styles.blockHeader}>
                             <p>{t("header.block_2.title")}</p>
                         </div>
-                        <div className={styles.blockContent}>
-                            <h5 className={styles.blockTitle}>020 7993 2905</h5>
-                            <p className={styles.blockText}>hello@finsweet.com</p>
+                        <div>
+                            <h5>{CONTACT_INFO.phone}</h5>
+                            <p className={styles.blockText}>{CONTACT_INFO.email}</p>
                         </div>
                     </div>
                 </div>

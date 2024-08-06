@@ -1,24 +1,34 @@
-import { ChangeEvent, FC } from "react";
+import { FC, forwardRef, SelectHTMLAttributes } from "react";
+import classNames from "classnames";
 
 import styles from "./select.module.scss";
 
-interface CustomSelectProps {
+interface CustomSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     name: string;
     label: string;
     options: { value: string; label: string }[];
-
-    onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+    errorMessage?: string | undefined;
 }
 
-export const CustomSelect: FC<CustomSelectProps> = ({ name, label, options, onChange }) => (
-    <select name={name} onChange={onChange} className={styles.select}>
-        <option value="" disabled selected>
-            {label}
-        </option>
-        {options.map((option) => (
-            <option key={option.value} value={option.value}>
-                {option.label}
-            </option>
-        ))}
-    </select>
+export const CustomSelect: FC<CustomSelectProps> = forwardRef<HTMLSelectElement, CustomSelectProps>(
+    ({ name, label, options, errorMessage, ...props }, ref) => {
+        const selectClasses = classNames(styles.select);
+
+        return (
+            <>
+                <select name={name} className={selectClasses} {...props} ref={ref}>
+                    <option value="" disabled>
+                        {label}
+                    </option>
+                    {options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+                {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+            </>
+        );
+    }
 );
+CustomSelect.displayName = "CustomSelect";
