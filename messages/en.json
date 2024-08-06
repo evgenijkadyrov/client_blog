@@ -45,6 +45,9 @@
     },
     "Category": {
       "title": "Choose A Category",
+      "titleForCategories": "Categories",
+      "searchPlaceholder": "Search by tag...",
+      "searchButton": "Search",
       "Cards": {
         "business": {
           "icon": "/business.svg",
@@ -67,6 +70,9 @@
           "description": "Discover cutting-edge innovations, tech trends, and the impact of technology on society in this dynamic and ever-evolving digital age."
         }
       }
+    },
+    "Tags": {
+      "title": "All Tags"
     },
     "WhyWeStarted": {
       "subTitle": "Why we started",

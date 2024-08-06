@@ -11,7 +11,7 @@ interface ContentProps {
     title: string;
     text: string;
 }
-interface PostsProps {
+export interface PostsProps {
     id: number;
     title: string;
     author: string;
@@ -30,7 +30,7 @@ export const POSTS_LIST: PostsProps[] = [
         createdAt: "May 23, 2024",
         description:
             "Choosing the right font combinations is crucial for creating visually appealing designs. Understanding how different fonts work together can elevate your project and make it stand out. In this guide, we will explore the step-by-step process of selecting great font pairs that harmonize and enhance your content.",
-        category: "Startup",
+        category: "startUp",
         img: Image_1,
         content: [
             {
@@ -44,7 +44,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Experimenting with various font combinations is key to finding the perfect match for your project. Consider factors such as contrast, similarity, and mood when pairing fonts. By testing different combinations and observing how they work together, you can discover unique pairings that enhance the overall aesthetic of your design.",
             },
         ],
-        tags: ["Business"],
+        tags: ["Business", "Life"],
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ export const POSTS_LIST: PostsProps[] = [
         createdAt: "Jun 23, 2024",
         description:
             "Choosing the right font combinations is crucial for creating visually appealing designs. Explore the process of selecting great font pairs.",
-        category: "Startup",
+        category: "StartUp",
         img: Image_2,
         content: [
             {
@@ -67,7 +67,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Experiment with various font combinations to find the perfect match for your project. Discover unique pairings that enhance your design.",
             },
         ],
-        tags: ["Business", "Startup"],
+        tags: ["Business", "Marketing"],
     },
     {
         id: 3,
@@ -90,7 +90,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Innovation drives economic growth by creating new opportunities and markets. Foster a culture of innovation for sustainable development.",
             },
         ],
-        tags: ["Economy"],
+        tags: ["Economy", "Screen"],
     },
     {
         id: 4,
@@ -113,7 +113,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Prioritize ethical AI practices for data privacy, bias, and transparency. Build trust with customers and regulators through ethical AI adoption.",
             },
         ],
-        tags: ["Technology"],
+        tags: ["Technology", "Experience"],
     },
     {
         id: 5,
@@ -122,7 +122,7 @@ export const POSTS_LIST: PostsProps[] = [
         createdAt: "Mar 12, 2024",
         description:
             "Effective marketing strategies are essential for startups to gain visibility and attract customers. Learn how to create impactful marketing campaigns and reach your target audience.",
-        category: "Startup",
+        category: "StartUp",
         img: Image_5,
         content: [
             {
@@ -136,7 +136,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Digital marketing offers startups cost-effective ways to reach a wider audience. Explore strategies such as social media marketing, content marketing, and SEO to boost your online presence.",
             },
         ],
-        tags: ["Technology", "Startup"],
+        tags: ["Technology", "Screen", "Marketing"],
     },
     {
         id: 6,
@@ -182,7 +182,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "AI is revolutionizing healthcare with applications in diagnostics, personalized medicine, and patient care. Explore how AI technologies are transforming the healthcare industry.",
             },
         ],
-        tags: ["Technology"],
+        tags: ["Technology", "Life"],
     },
     {
         id: 8,
@@ -205,7 +205,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Data-driven strategies involve using data analysis to guide decision-making processes across various business functions. Implement data-driven approaches to optimize performance and achieve strategic goals.",
             },
         ],
-        tags: ["Technology"],
+        tags: ["Technology", "Marketing", "Screen"],
     },
     {
         id: 9,
@@ -228,7 +228,7 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Securing networks and systems is essential to prevent unauthorized access and protect sensitive information. Implement security protocols, encryption measures, and regular audits to maintain a robust cybersecurity posture.",
             },
         ],
-        tags: ["Startup"],
+        tags: ["StartUp", "Economy", "Experience"],
     },
     {
         id: 10,
@@ -251,6 +251,6 @@ export const POSTS_LIST: PostsProps[] = [
                 text: "Empathy is a fundamental aspect of emotional intelligence that fosters understanding and connection with team members. Embrace empathy to build a positive work culture and enhance team collaboration.",
             },
         ],
-        tags: ["Business"],
+        tags: ["Business", "Life", "Screen"],
     },
 ];

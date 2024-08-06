@@ -1,0 +1,65 @@
+@import "src/styles/colors";
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.tagsBlock {
+    max-width: 300px;
+
+    &Input {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 660px) {
+        margin: 0 auto;
+    }
+}
+.postWrapper {
+    margin-bottom: 32px;
+}
+.categories {
+    padding-top: 60px;
+    padding-bottom: 48px;
+
+    &Title {
+        margin-bottom: 40px;
+    }
+
+    &Row {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    &Title {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    &Item {
+        padding: 8px 30px;
+        border: 1px solid $dark-blue;
+
+        font-size: 16px;
+
+        border-radius: 15px;
+
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &:hover,
+        &Active {
+            border-color: $white;
+
+            background-color: $dark-blue;
+            color: $white;
+        }
+    }
+}
