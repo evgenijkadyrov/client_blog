@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 
 import { ContactForm } from "components/ContactForm";
 import Container from "components/Container";
-import { Map } from "components/Map";
+import { MapComponent } from "components/Map";
 
 import "styles/globals.scss";
 import styles from "./contact.module.scss";
@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
             </section>
             <ContactForm />
-            <Map />
+            <MapComponent />
         </Container>
     );
 };
