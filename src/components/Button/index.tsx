@@ -7,7 +7,7 @@ import styles from "./button.module.scss";
 interface CustomButtonProps {
     label?: string;
     bgcolor?: string;
-    size?: "small" | "medium" | "large";
+    size?: "small" | "medium" | "large" | "full";
     children?: ReactNode;
     onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
     type?: "submit" | "reset" | "button";
