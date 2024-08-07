@@ -12,7 +12,9 @@
     "cypress:open": "cypress open",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
-    "prettier": "prettier \"src/**/*.{ts,tsx}\" . --write --cache"
+    "prettier": "prettier \"src/**/*.{ts,tsx}\" . --write --cache",
+    "server": "json-server -w server/db.json -p 3002",
+    "dev:server": "concurrently \"yarn dev\" \"yarn server\""
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -48,6 +50,7 @@
     "@types/react": "18.3.3",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
     "@typescript-eslint/parser": "^7.17.0",
+    "concurrently": "^8.2.2",
     "cypress": "^13.13.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -62,6 +65,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "globals": "^15.8.0",
     "husky": "^9.1.2",
+    "json-server": "^1.0.0-beta.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "storybook": "^8.2.6",

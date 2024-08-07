@@ -1,23 +1,22 @@
-"use client";
-
-import { POSTS_LIST } from "constants/posts";
+import { PostsProps } from "constants/posts";
 import { AppRoutes } from "constants/routerPath";
 import { getRandomElements } from "helpers/randomAuthorList";
-import { Link, useRouter } from "navigation";
-import { useTranslations } from "next-intl";
+import { Link } from "navigation";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "components/Button";
+import { PostLink } from "components/PostLink";
 
 import styles from "./featuredPosts.module.scss";
 
-export const FeaturedPosts = () => {
-    const t = useTranslations("HomeHero");
-    const router = useRouter();
+interface FeaturedPostsProps {
+    posts: PostsProps[];
+}
+export const FeaturedPosts = async ({ posts }: FeaturedPostsProps) => {
+    const t = await getTranslations("HomeHero");
 
-    const currentPosts = getRandomElements(POSTS_LIST, 4);
-    const handleClickPost = (id: number): void => {
-        router.push(`/${AppRoutes.POSTS}/${id}`);
-    };
+    const currentPosts = getRandomElements(posts, 4);
+
     return (
         <section className={styles.postsWrapper}>
             <article className={styles.featuredPost}>
@@ -43,18 +42,13 @@ export const FeaturedPosts = () => {
                 </div>
                 <div className={styles.allPostsColumn}>
                     {currentPosts.map(({ id, author, createdAt, title }) => (
-                        <div
+                        <PostLink
                             key={id}
-                            className={styles.post}
-                            onClick={() => handleClickPost(id)}
-                            onKeyDown={() => {}}
-                            role="button"
-                            tabIndex={0}>
-                            <p className={styles.postAuthor}>
-                                By {author} | {createdAt}
-                            </p>
-                            <h4 className={styles.featuredPostTitle}>{title}</h4>
-                        </div>
+                            title={title}
+                            id={id}
+                            createdAt={createdAt}
+                            author={author}
+                        />
                     ))}
                 </div>
             </div>

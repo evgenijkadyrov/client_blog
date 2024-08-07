@@ -1,4 +1,3 @@
-import React from "react";
 import AvatarDefault from "assets/icons/Profile picture.svg";
 import { POSTS_LIST } from "constants/posts";
 import Image from "next/image";

@@ -1,7 +1,8 @@
-import React from "react";
 import { AUTHORS } from "constants/authors";
+import { PostsProps } from "constants/posts";
 import { getRandomElements } from "helpers/randomAuthorList";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import getData from "service/getData";
 
 import Container from "components/Container";
 import FeaturedIn from "components/FeaturedIn";
@@ -17,15 +18,16 @@ import { Testimonials } from "components/Testimonials";
 import "styles/globals.scss";
 import styles from "./home.module.scss";
 
-const Page = () => {
-    const t = useTranslations("HomeHero");
+const Page = async () => {
+    const t = await getTranslations("HomeHero");
+    const posts: PostsProps[] = await getData();
     const currentAuthors = getRandomElements(AUTHORS, 4);
-
+    console.log("posts", posts);
     return (
         <>
             <HomeHero />
             <Container>
-                <FeaturedPosts />
+                <FeaturedPosts posts={posts} />
             </Container>
             <div className={styles.aboutContainer}>
                 <AboutUs />
