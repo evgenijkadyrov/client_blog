@@ -1,12 +1,11 @@
-import React from "react";
 import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import styles from "./aboutUs.module.scss";
 
-export const AboutUs = () => {
-    const t = useTranslations("HomeHero");
+export const AboutUs = async () => {
+    const t = await getTranslations("HomeHero");
     return (
         <>
             <div className={styles.blocks}>

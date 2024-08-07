@@ -1,4 +1,3 @@
-import React from "react";
 import { LOGOS } from "constants/logos";
 import Image from "next/image";
 

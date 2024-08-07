@@ -1,7 +1,8 @@
 import AvatarDefault from "assets/icons/Profile picture.svg";
-import { POSTS_LIST } from "constants/posts";
+import { POSTS_LIST, PostsProps } from "constants/posts";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { getPost } from "service/getData";
 
 import Container from "components/Container";
 import { JoinUsHome } from "components/Home/JoinUs";
@@ -15,12 +16,10 @@ interface PostProps {
         id: string;
     };
 }
-const Post = ({ params: { id } }: PostProps) => {
-    const t = useTranslations("Post");
 
-    const { title, img, category, content, author, createdAt } = POSTS_LIST.find(
-        (item) => item.id === parseInt(id, 10)
-    )!;
+const Post = async ({ params: { id } }: PostProps) => {
+    const t = await getTranslations("Post");
+    const { title, img, category, content, author, createdAt } = (await getPost(id)) as PostsProps;
     const otherPosts = POSTS_LIST.filter((item) => item.category === category)
         .slice(0, 3)
         .filter((item) => item.id !== parseInt(id, 10));
@@ -39,19 +38,20 @@ const Post = ({ params: { id } }: PostProps) => {
                         <p className={styles.authorItemInfoCreated}>{createdAt}</p>
                     </div>
                 </div>
-                <h1 className={styles.contentTitle}>{title}</h1>
+                <h1>{title}</h1>
                 <div className={styles.contentCategory}>
                     {/* <Image src={categoryInfo.icon} alt={categoryInfo.title} loading="lazy" /> */}
                     <h4>{category}</h4>
                 </div>
-
-                <Image
-                    src={img}
-                    alt={title}
-                    loading="lazy"
-                    className={styles.contentImage}
-                    layout="responsive"
-                />
+                <div className={styles.contentWrapper}>
+                    <Image
+                        src={img }
+                        alt={title}
+                        loading="lazy"
+                        className={styles.contentWrapperImage}
+                        fill
+                    />
+                </div>
 
                 {content.map(({ title, text, id }) => (
                     <article key={id} className={styles.post}>

@@ -1,14 +1,13 @@
-import React from "react";
 import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "components/Button";
 
 import styles from "./homeHero.module.scss";
 
-export const HomeHero = () => {
-    const t = useTranslations("HomeHero");
+export const HomeHero = async () => {
+    const t = await getTranslations("HomeHero");
     return (
         <section className={styles.top}>
             <div className={styles.imageFirst} />

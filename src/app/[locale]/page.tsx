@@ -2,7 +2,7 @@ import { AUTHORS } from "constants/authors";
 import { PostsProps } from "constants/posts";
 import { getRandomElements } from "helpers/randomAuthorList";
 import { getTranslations } from "next-intl/server";
-import getData from "service/getData";
+import { getPosts } from "service/getData";
 
 import Container from "components/Container";
 import FeaturedIn from "components/FeaturedIn";
@@ -20,9 +20,8 @@ import styles from "./home.module.scss";
 
 const Page = async () => {
     const t = await getTranslations("HomeHero");
-    const posts: PostsProps[] = await getData();
+    const posts: PostsProps[] = (await getPosts()) as PostsProps[];
     const currentAuthors = getRandomElements(AUTHORS, 4);
-    console.log("posts", posts);
     return (
         <>
             <HomeHero />

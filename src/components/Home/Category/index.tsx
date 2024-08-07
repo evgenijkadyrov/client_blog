@@ -1,4 +1,3 @@
-import React from "react";
 import { keysCategory } from "constants/keysCategory";
 
 import { CategoryItem } from "./CategoryItem";

@@ -1,14 +1,14 @@
 import React from "react";
 import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "components/Button";
 
 import styles from "./specialPost.module.scss";
 
-export const SpecialPost = () => {
-    const t = useTranslations("HomeHero");
+export const SpecialPost = async () => {
+    const t = await getTranslations("HomeHero");
     return (
         <section className={styles.whyWeStarted}>
             <div className={styles.whyWeStartedImage} />

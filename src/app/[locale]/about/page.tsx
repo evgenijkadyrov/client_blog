@@ -1,11 +1,10 @@
-import React from "react";
 import ImageBgr from "assets/images/about/background.jpg";
 import Image_1 from "assets/images/about/ground-group-growth-hands-461049.jpg";
 import Image_2 from "assets/images/about/three-persons-sitting-on-the-stairs-talking-with-each-other-1438072.jpg";
 import { AUTHORS } from "constants/authors";
 import { getRandomElements } from "helpers/randomAuthorList";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Container from "components/Container";
 import { AuthorsBlock } from "components/Home/Authors";
@@ -14,8 +13,8 @@ import { JoinUsHome } from "components/Home/JoinUs";
 import "styles/globals.scss";
 import styles from "./about.module.scss";
 
-const About = () => {
-    const t = useTranslations("About");
+const About = async () => {
+    const t = await getTranslations("About");
     const authors = getRandomElements(AUTHORS, 8);
 
     return (

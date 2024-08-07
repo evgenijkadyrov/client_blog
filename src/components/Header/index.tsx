@@ -1,5 +1,3 @@
-"use client";
-
 import { ModalVideo } from "components/ModalVideo";
 import { NavPanel } from "components/NavPanel";
 

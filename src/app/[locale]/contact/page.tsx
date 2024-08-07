@@ -1,5 +1,5 @@
 import { CONTACT_INFO } from "constants/contactInfo";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { ContactForm } from "components/ContactForm";
 import Container from "components/Container";
@@ -8,8 +8,8 @@ import { MapComponent } from "components/Map";
 import "styles/globals.scss";
 import styles from "./contact.module.scss";
 
-const Contact = () => {
-    const t = useTranslations("ContactPage");
+const Contact = async () => {
+    const t = await getTranslations("ContactPage");
     return (
         <Container>
             <section className={styles.top}>

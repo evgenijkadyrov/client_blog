@@ -1,6 +1,5 @@
-import React from "react";
 import { Author } from "constants/authors";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { AuthorItem } from "components/Home/Authors/AuthorItem";
 
@@ -10,8 +9,8 @@ interface AuthorsBlockProps {
     authors: unknown[];
 }
 
-export const AuthorsBlock = ({ authors }: AuthorsBlockProps) => {
-    const t = useTranslations("HomeHero");
+export const AuthorsBlock = async ({ authors }: AuthorsBlockProps) => {
+    const t = await getTranslations("HomeHero");
 
     return (
         <section className={styles.listOfAuthors}>

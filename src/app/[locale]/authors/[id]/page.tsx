@@ -2,7 +2,7 @@ import { AUTHORS } from "constants/authors";
 import { POSTS_LIST } from "constants/posts";
 import { Link } from "navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Container from "components/Container";
 import { PostItem } from "components/Post";
@@ -14,8 +14,8 @@ interface AuthorPageProps {
     params: { id: string };
 }
 
-const AuthorPage = ({ params: { id } }: AuthorPageProps) => {
-    const t = useTranslations("Author");
+const AuthorPage = async ({ params: { id } }: AuthorPageProps) => {
+    const t = await getTranslations("Author");
     const authorInfo = AUTHORS.find((author) => author.id === parseInt(id, 10));
     if (!authorInfo) {
         return null;
