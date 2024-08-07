@@ -14,6 +14,7 @@ import { HomeHero } from "components/Home/HomeHero";
 import { JoinUsHome } from "components/Home/JoinUs";
 import { SpecialPost } from "components/Home/SpecialPost";
 import { Testimonials } from "components/Testimonials";
+import { WithVisibility } from "components/WithVisibility";
 
 import "styles/globals.scss";
 import styles from "./home.module.scss";
@@ -25,31 +26,47 @@ const Page = async () => {
     return (
         <>
             <HomeHero />
-            <Container>
-                <FeaturedPosts posts={posts} />
-            </Container>
-            <div className={styles.aboutContainer}>
-                <AboutUs />
-            </div>
-            <Container>
-                <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
-                <CategoryHome />
-            </Container>
-            <Container>
-                <SpecialPost />
-            </Container>
-            <Container>
-                <AuthorsBlock authors={currentAuthors} />
-            </Container>
-            <Container>
-                <FeaturedIn />
-            </Container>
-            <Container>
-                <Testimonials />
-            </Container>
-            <Container>
-                <JoinUsHome />
-            </Container>
+            <WithVisibility>
+                <Container>
+                    <FeaturedPosts posts={posts} />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <AboutUs />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
+                    <CategoryHome />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <SpecialPost />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <AuthorsBlock authors={currentAuthors} />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <FeaturedIn />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <Testimonials />
+                </Container>
+            </WithVisibility>
+            <WithVisibility>
+                <Container>
+                    <JoinUsHome />
+                </Container>
+            </WithVisibility>
         </>
     );
 };

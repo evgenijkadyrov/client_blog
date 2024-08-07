@@ -1,0 +1,15 @@
+.item {
+    transition: opacity 0.5s linear;
+
+    &Visible {
+        opacity: 1;
+        transform: translateX(0px);
+        filter: blur(0);
+    }
+
+    &NotVisible {
+        opacity: 0;
+        transform: translateX(-20px);
+        filter: blur(16px);
+    }
+}

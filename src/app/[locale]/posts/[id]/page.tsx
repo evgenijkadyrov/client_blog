@@ -45,7 +45,7 @@ const Post = async ({ params: { id } }: PostProps) => {
                 </div>
                 <div className={styles.contentWrapper}>
                     <Image
-                        src={img }
+                        src={img}
                         alt={title}
                         loading="lazy"
                         className={styles.contentWrapperImage}
