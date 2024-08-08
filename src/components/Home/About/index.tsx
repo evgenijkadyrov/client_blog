@@ -16,14 +16,26 @@ export const AboutUs = async () => {
             <section className={styles.about}>
                 <div className={styles.articleWrapper}>
                     <article className={styles.aboutArticle}>
-                        <h5 className={styles.aboutSubTitle}>{t("AboutUs.subTitleFirst")}</h5>
-                        <h2 className={styles.aboutTitle}>{t("AboutUs.titleFirst")}</h2>
-                        <p className={styles.aboutDescription}>{t("AboutUs.descriptionFirst")}</p>
+                        <h5 className={styles.aboutSubTitle}>
+                            {t("AboutUs.subTitleFirst")}
+                        </h5>
+                        <h2 className={styles.aboutTitle}>
+                            {t("AboutUs.titleFirst")}
+                        </h2>
+                        <p className={styles.aboutDescription}>
+                            {t("AboutUs.descriptionFirst")}
+                        </p>
                     </article>
                     <article className={styles.aboutArticle}>
-                        <h5 className={styles.aboutSubTitle}>{t("AboutUs.subTitleSecond")}</h5>
-                        <h2 className={styles.aboutTitle}>{t("AboutUs.titleSecond")}</h2>
-                        <p className={styles.aboutDescription}>{t("AboutUs.descriptionSecond")}</p>
+                        <h5 className={styles.aboutSubTitle}>
+                            {t("AboutUs.subTitleSecond")}
+                        </h5>
+                        <h2 className={styles.aboutTitle}>
+                            {t("AboutUs.titleSecond")}
+                        </h2>
+                        <p className={styles.aboutDescription}>
+                            {t("AboutUs.descriptionSecond")}
+                        </p>
                     </article>
                 </div>
                 <Link href={`${AppRoutes.ABOUT}`} className={styles.aboutLink}>

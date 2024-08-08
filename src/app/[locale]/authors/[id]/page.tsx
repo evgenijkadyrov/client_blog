@@ -35,7 +35,12 @@ const AuthorPage = async ({ params: { id } }: AuthorPageProps) => {
         <>
             <section className={styles.top}>
                 <div className={styles.topInner}>
-                    <Image src={img} alt="author" loading="lazy" className={styles.topImage} />
+                    <Image
+                        src={img}
+                        alt="author"
+                        loading="lazy"
+                        className={styles.topImage}
+                    />
                     <div className={styles.topContent}>
                         <h1 className={styles.topTitle}>
                             {t("top.title.firstPart")}
@@ -64,7 +69,9 @@ const AuthorPage = async ({ params: { id } }: AuthorPageProps) => {
                 <section className={styles.posts}>
                     {authorPosts.length > 0 ? (
                         <>
-                            <h2 className={styles.postsTitle}>{t("posts.title")}</h2>
+                            <h2 className={styles.postsTitle}>
+                                {t("posts.title")}
+                            </h2>
                             <div className={styles.postsRow}>
                                 {authorPosts.map((post) => (
                                     <PostItem key={post.id} post={post} />
@@ -72,7 +79,9 @@ const AuthorPage = async ({ params: { id } }: AuthorPageProps) => {
                             </div>
                         </>
                     ) : (
-                        <h2 className={styles.postsSecondTitle}>{t("posts.secondTitle")}</h2>
+                        <h2 className={styles.postsSecondTitle}>
+                            {t("posts.secondTitle")}
+                        </h2>
                     )}
                 </section>
             </Container>

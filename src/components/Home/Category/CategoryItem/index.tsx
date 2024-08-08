@@ -15,7 +15,11 @@ interface CategoryItemProps {
     full?: boolean;
 }
 
-export const CategoryItem = ({ category, id, full = true }: CategoryItemProps) => {
+export const CategoryItem = ({
+    category,
+    id,
+    full = true,
+}: CategoryItemProps) => {
     const t = useTranslations("HomeHero");
     const router = useRouter();
     const handleClickCategory = (): void => {
@@ -28,7 +32,10 @@ export const CategoryItem = ({ category, id, full = true }: CategoryItemProps) =
     };
     return (
         <div
-            className={classNames(styles.categoryBlock, !full && styles.categoryBlockShort)}
+            className={classNames(
+                styles.categoryBlock,
+                !full && styles.categoryBlockShort
+            )}
             key={id}
             onClick={handleClickCategory}
             onKeyDown={handleKeyDown}
@@ -41,9 +48,13 @@ export const CategoryItem = ({ category, id, full = true }: CategoryItemProps) =
                 width={48}
                 height={48}
             />
-            <h3 className={styles.categoryBlockTitle}>{t(`${category}.title`)}</h3>
+            <h3 className={styles.categoryBlockTitle}>
+                {t(`${category}.title`)}
+            </h3>
             {full && (
-                <p className={styles.categoryBlockDescription}>{t(`${category}.description`)}</p>
+                <p className={styles.categoryBlockDescription}>
+                    {t(`${category}.description`)}
+                </p>
             )}
         </div>
     );

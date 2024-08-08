@@ -106,7 +106,11 @@ export const ContactForm = () => {
                         {...register("message")}
                         errorMessage={errors.message?.message}
                     />
-                    <Button type="submit" bgcolor="yellow" size="full" disabled={!isValid}>
+                    <Button
+                        type="submit"
+                        bgcolor="yellow"
+                        size="full"
+                        disabled={!isValid}>
                         {t("form.button")}
                     </Button>
                 </form>

@@ -12,7 +12,11 @@ interface LocaleSwitcherProps {
     label: string;
 }
 
-export const LocaleSwitcherSelect = ({ children, defaultValue, label }: LocaleSwitcherProps) => {
+export const LocaleSwitcherSelect = ({
+    children,
+    defaultValue,
+    label,
+}: LocaleSwitcherProps) => {
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();

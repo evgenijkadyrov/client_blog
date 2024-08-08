@@ -13,9 +13,12 @@ const NotFound = () => (
             <section className={styles.section}>
                 <div className={styles.container}>
                     <h1 className={styles.title}>404</h1>
-                    <h2 className={styles.subTitle}>Sorry, This page is not available.</h2>
+                    <h2 className={styles.subTitle}>
+                        Sorry, This page is not available.
+                    </h2>
                     <p className={styles.text}>
-                        You are trying to get page that not created yet. But we are working on it.
+                        You are trying to get page that not created yet. But we
+                        are working on it.
                     </p>
                     <Button bgcolor="yellow" size="large">
                         <Link href={AppRoutes.HOME}>Home</Link>

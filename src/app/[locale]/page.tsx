@@ -38,7 +38,9 @@ const Page = async () => {
             </WithVisibility>
             <WithVisibility>
                 <Container>
-                    <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
+                    <h2 className={styles.categoryTitle}>
+                        {t("Category.title")}
+                    </h2>
                     <CategoryHome />
                 </Container>
             </WithVisibility>

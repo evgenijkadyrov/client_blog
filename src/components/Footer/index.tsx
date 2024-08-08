@@ -28,7 +28,9 @@ export const Footer = async () => {
                         {CONTACT_INFO.address} <br />
                         {CONTACT_INFO.email} {CONTACT_INFO.phone}
                     </p>
-                    <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
+                    <LocaleSwitcherSelect
+                        defaultValue={locale}
+                        label={t("label")}>
                         {locales.map((cur) => (
                             <option key={cur} value={cur}>
                                 {t("locale", { locale: cur })}

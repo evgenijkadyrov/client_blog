@@ -1,6 +1,11 @@
 "use client";
 
-import React, { KeyboardEvent, SyntheticEvent, useEffect, useState } from "react";
+import React, {
+    KeyboardEvent,
+    SyntheticEvent,
+    useEffect,
+    useState,
+} from "react";
 import classNames from "classnames";
 import { keysCategory } from "constants/keysCategory";
 import { PostsProps } from "constants/posts";
@@ -39,7 +44,9 @@ export const PostsFiltered = ({ posts }: PostsFilteredProps) => {
             );
         }
         if (activeTags.length > 0) {
-            copyPosts = posts.filter((post) => post.tags.some((r) => activeTags.includes(r)));
+            copyPosts = posts.filter((post) =>
+                post.tags.some((r) => activeTags.includes(r))
+            );
         }
 
         setFilteredPosts([...copyPosts]);
@@ -69,10 +76,17 @@ export const PostsFiltered = ({ posts }: PostsFilteredProps) => {
                     placeholderText={t("Category.searchPlaceholder")}
                 />
                 <div className={styles.categories}>
-                    <h2 className={styles.categoriesTitle}>{t("Category.titleForCategories")}</h2>
+                    <h2 className={styles.categoriesTitle}>
+                        {t("Category.titleForCategories")}
+                    </h2>
                     <div className={styles.categoriesRow}>
                         {keysCategory.map(({ category, id }) => (
-                            <CategoryItem key={id} category={category} id={id} full={false} />
+                            <CategoryItem
+                                key={id}
+                                category={category}
+                                id={id}
+                                full={false}
+                            />
                         ))}
                     </div>
                 </div>
@@ -82,7 +96,8 @@ export const PostsFiltered = ({ posts }: PostsFilteredProps) => {
                         <div
                             className={classNames(
                                 styles.tagsItem,
-                                activeTags.includes(title) && styles.tagsItemActive
+                                activeTags.includes(title) &&
+                                    styles.tagsItemActive
                             )}
                             key={id}
                             onClick={onTagClickHandler}

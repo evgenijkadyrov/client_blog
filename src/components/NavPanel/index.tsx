@@ -44,7 +44,9 @@ export const NavPanel = ({ full }: NavPanelProps) => {
             {/*   htmlFor={styles.menuToggle}> */}
             {/*   <span /> */}
             {/* </label> */}
-            <nav className={classNames(styles.nav, full && styles.navFull)}>{renderNav()}</nav>
+            <nav className={classNames(styles.nav, full && styles.navFull)}>
+                {renderNav()}
+            </nav>
         </div>
     );
 };

@@ -14,11 +14,18 @@ export const AuthorsBlock = async ({ authors }: AuthorsBlockProps) => {
 
     return (
         <section className={styles.listOfAuthors}>
-            <h2 className={styles.listOfAuthorsTitle}>{t("ListOfAuthor.title")}</h2>
+            <h2 className={styles.listOfAuthorsTitle}>
+                {t("ListOfAuthor.title")}
+            </h2>
             <div className={styles.listOfAuthorsBlock}>
-                {(authors as Author[]).map(({ img, name, role, socials, id }) => (
-                    <AuthorItem key={id} author={{ name, role, socials, img, id }} />
-                ))}
+                {(authors as Author[]).map(
+                    ({ img, name, role, socials, id }) => (
+                        <AuthorItem
+                            key={id}
+                            author={{ name, role, socials, img, id }}
+                        />
+                    )
+                )}
             </div>
         </section>
     );

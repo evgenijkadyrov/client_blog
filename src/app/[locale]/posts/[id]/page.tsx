@@ -19,7 +19,9 @@ interface PostProps {
 
 const Post = async ({ params: { id } }: PostProps) => {
     const t = await getTranslations("Post");
-    const { title, img, category, content, author, createdAt } = (await getPost(id)) as PostsProps;
+    const { title, img, category, content, author, createdAt } = (await getPost(
+        id
+    )) as PostsProps;
     const otherPosts = POSTS_LIST.filter((item) => item.category === category)
         .slice(0, 3)
         .filter((item) => item.id !== parseInt(id, 10));
@@ -35,7 +37,9 @@ const Post = async ({ params: { id } }: PostProps) => {
                     />
                     <div className={styles.authorItemInfo}>
                         <h3 className={styles.authorItemInfoName}>{author}</h3>
-                        <p className={styles.authorItemInfoCreated}>{createdAt}</p>
+                        <p className={styles.authorItemInfoCreated}>
+                            {createdAt}
+                        </p>
                     </div>
                 </div>
                 <h1>{title}</h1>

@@ -6,7 +6,9 @@ import styles from "./search.module.scss";
 
 const getFilteredSymbols = (symbols: string[], inputValue: string): string[] =>
     symbols
-        .filter((symbol) => symbol.toLowerCase().includes(inputValue.toLowerCase()))
+        .filter((symbol) =>
+            symbol.toLowerCase().includes(inputValue.toLowerCase())
+        )
         .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
 interface SearchProps {
@@ -30,9 +32,13 @@ export const Search = ({ setInputValue, placeholderText }: SearchProps) => {
         setIsListOpen(true);
     };
 
-    const getTagsListFromObject = <T extends { title: string }>(array: T[]): string[] =>
-        array.map((el) => el.title);
-    const filteredSymbols = getFilteredSymbols(getTagsListFromObject(TAGS), value);
+    const getTagsListFromObject = <T extends { title: string }>(
+        array: T[]
+    ): string[] => array.map((el) => el.title);
+    const filteredSymbols = getFilteredSymbols(
+        getTagsListFromObject(TAGS),
+        value
+    );
 
     const handleChangeSearch = (e: ChangeEvent<HTMLInputElement>) => {
         const { target } = e;
@@ -54,7 +60,9 @@ export const Search = ({ setInputValue, placeholderText }: SearchProps) => {
                     className={styles.input}
                     onFocus={handleFocused}
                 />
-                <button className={styles.inputSearchButton} onClick={handleButtonClick}>
+                <button
+                    className={styles.inputSearchButton}
+                    onClick={handleButtonClick}>
                     {t("Category.searchButton")}
                 </button>
             </div>

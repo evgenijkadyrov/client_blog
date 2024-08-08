@@ -26,7 +26,9 @@ export const HomeHero = async () => {
                 <p className={styles.heroCreatedAt}>{t("heroDescription")}</p>
                 <div className={styles.buttonWrapper}>
                     <Button bgcolor="yellow">
-                        <Link href={`${AppRoutes.POSTS}/1`} className={styles.link}>
+                        <Link
+                            href={`${AppRoutes.POSTS}/1`}
+                            className={styles.link}>
                             {t("buttonText")}
                         </Link>
                     </Button>

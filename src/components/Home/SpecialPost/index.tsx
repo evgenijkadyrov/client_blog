@@ -13,9 +13,15 @@ export const SpecialPost = async () => {
         <section className={styles.whyWeStarted}>
             <div className={styles.whyWeStartedImage} />
             <div className={styles.whyWeStartedContent}>
-                <h5 className={styles.whyWeStartedSupTitle}>{t("WhyWeStarted.subTitle")}</h5>
-                <h1 className={styles.whyWeStartedTitle}>{t("WhyWeStarted.title")}</h1>
-                <p className={styles.whyWeStartedText}>{t("WhyWeStarted.description")}</p>
+                <h5 className={styles.whyWeStartedSupTitle}>
+                    {t("WhyWeStarted.subTitle")}
+                </h5>
+                <h1 className={styles.whyWeStartedTitle}>
+                    {t("WhyWeStarted.title")}
+                </h1>
+                <p className={styles.whyWeStartedText}>
+                    {t("WhyWeStarted.description")}
+                </p>
                 <Button size="large" bgcolor="yellow">
                     <Link href={AppRoutes.ABOUT} className={styles.link}>
                         {t("WhyWeStarted.buttonText")}

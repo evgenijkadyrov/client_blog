@@ -3,7 +3,8 @@ import classNames from "classnames";
 
 import styles from "./textarea.module.scss";
 
-interface CustomTextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+interface CustomTextAreaProps
+    extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     className?: string;
     errorMessage?: string | undefined;
 }

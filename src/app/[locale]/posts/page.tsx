@@ -22,7 +22,9 @@ const Blog = async () => {
                     <p className={styles.createdBy}>{t("postContent")}</p>
                     <div className={styles.buttonWrapper}>
                         <Button bgcolor="yellow">
-                            <Link href={`${AppRoutes.POSTS}/2`} className={styles.link}>
+                            <Link
+                                href={`${AppRoutes.POSTS}/2`}
+                                className={styles.link}>
                                 {t("buttonText")}
                             </Link>
                         </Button>

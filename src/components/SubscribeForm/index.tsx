@@ -62,7 +62,10 @@ export const SubscribeForm = () => {
                     onBlur={onBlurHandler}
                 />
 
-                <Button bgcolor="yellow" onClick={handleSendEmail} type="submit">
+                <Button
+                    bgcolor="yellow"
+                    onClick={handleSendEmail}
+                    type="submit">
                     {t("buttonSubscribe")}
                 </Button>
             </form>

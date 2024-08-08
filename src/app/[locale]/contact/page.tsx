@@ -26,7 +26,9 @@ const Contact = async () => {
                         <div>
                             <h5>{t("header.block_1.days")}</h5>
                             <h5>{t("header.block_1.time")}</h5>
-                            <p className={styles.blockText}>{t("header.block_1.description")}</p>
+                            <p className={styles.blockText}>
+                                {t("header.block_1.description")}
+                            </p>
                         </div>
                     </div>
                     <div className={styles.formHeaderBlock}>
@@ -35,7 +37,9 @@ const Contact = async () => {
                         </div>
                         <div>
                             <h5>{CONTACT_INFO.phone}</h5>
-                            <p className={styles.blockText}>{CONTACT_INFO.email}</p>
+                            <p className={styles.blockText}>
+                                {CONTACT_INFO.email}
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,13 @@ export const MapComponent = () => {
                     latitude: COORDINATE_CENTRE_MAP.lat,
                 }}>
                 {MARKERS_MAP.map(({ id, lat, lng }) => (
-                    <Marker key={id} latitude={lat} longitude={lng} anchor="center" color="red" />
+                    <Marker
+                        key={id}
+                        latitude={lat}
+                        longitude={lng}
+                        anchor="center"
+                        color="red"
+                    />
                 ))}
                 <NavigationControl position="top-left" />
             </Map>

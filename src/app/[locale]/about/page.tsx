@@ -29,7 +29,12 @@ const About = async () => {
                 </div>
             </section>
             <section className={styles.stats}>
-                <Image src={ImageBgr} alt="ImageBgr" loading="lazy" className={styles.statsImage} />
+                <Image
+                    src={ImageBgr}
+                    alt="ImageBgr"
+                    loading="lazy"
+                    className={styles.statsImage}
+                />
                 <div className={styles.whiteBlock} />
                 <div className={styles.yellowBlock} />
                 <div className={styles.purpleBlock} />
@@ -57,7 +62,9 @@ const About = async () => {
                         <h3 className={styles.misionVisionTitle}>
                             {t("misionVision.block_1.title")}
                         </h3>
-                        <p className={styles.misionVisionText}>{t("misionVision.block_1.text")}</p>
+                        <p className={styles.misionVisionText}>
+                            {t("misionVision.block_1.text")}
+                        </p>
                     </article>
                     <article className={styles.misionVisionBlock}>
                         <h5 className={styles.misionVisionSupTitle}>
@@ -66,34 +73,52 @@ const About = async () => {
                         <h3 className={styles.misionVisionTitle}>
                             {t("misionVision.block_2.title")}
                         </h3>
-                        <p className={styles.misionVisionText}>{t("misionVision.block_2.text")}</p>
+                        <p className={styles.misionVisionText}>
+                            {t("misionVision.block_2.text")}
+                        </p>
                     </article>
                 </div>
             </section>
             <section className={styles.descriptionRow}>
                 <article className={styles.descriptionContent}>
-                    <h2 className={styles.descriptionTitle}>{t("description.block_1.title")}</h2>
+                    <h2 className={styles.descriptionTitle}>
+                        {t("description.block_1.title")}
+                    </h2>
                     <h4 className={styles.descriptionSubTitle}>
                         {t("description.block_1.subTitle")}
                     </h4>
-                    <p className={styles.descriptionText}>{t("description.block_1.text")}</p>
+                    <p className={styles.descriptionText}>
+                        {t("description.block_1.text")}
+                    </p>
                 </article>
                 <div className={styles.descriptionImage}>
-                    <Image src={Image_1} alt="ground-group-growth-hands" loading="lazy" />
+                    <Image
+                        src={Image_1}
+                        alt="ground-group-growth-hands"
+                        loading="lazy"
+                    />
                     <div className={styles.figure_1} />
                 </div>
             </section>
             <section className={styles.descriptionRow}>
                 <div className={styles.descriptionImage}>
-                    <Image src={Image_2} alt="three-persons-sitting-on-the-stairs" loading="lazy" />
+                    <Image
+                        src={Image_2}
+                        alt="three-persons-sitting-on-the-stairs"
+                        loading="lazy"
+                    />
                     <div className={styles.figure_2} />
                 </div>
                 <article className={styles.descriptionContent}>
-                    <h2 className={styles.descriptionTitle}>{t("description.block_1.title")}</h2>
+                    <h2 className={styles.descriptionTitle}>
+                        {t("description.block_1.title")}
+                    </h2>
                     <h4 className={styles.descriptionSubTitle}>
                         {t("description.block_2.subTitle")}
                     </h4>
-                    <p className={styles.descriptionText}>{t("description.block_1.text")}</p>
+                    <p className={styles.descriptionText}>
+                        {t("description.block_1.text")}
+                    </p>
                 </article>
             </section>
             <Container>

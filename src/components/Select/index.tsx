@@ -10,25 +10,26 @@ interface CustomSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     errorMessage?: string | undefined;
 }
 
-export const CustomSelect: FC<CustomSelectProps> = forwardRef<HTMLSelectElement, CustomSelectProps>(
-    ({ name, label, options, errorMessage, ...props }, ref) => {
-        const selectClasses = classNames(styles.select);
+export const CustomSelect: FC<CustomSelectProps> = forwardRef<
+    HTMLSelectElement,
+    CustomSelectProps
+>(({ name, label, options, errorMessage, ...props }, ref) => {
+    const selectClasses = classNames(styles.select);
 
-        return (
-            <>
-                <select name={name} className={selectClasses} {...props} ref={ref}>
-                    <option value="" disabled>
-                        {label}
+    return (
+        <>
+            <select name={name} className={selectClasses} {...props} ref={ref}>
+                <option value="" disabled>
+                    {label}
+                </option>
+                {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
                     </option>
-                    {options.map((option) => (
-                        <option key={option.value} value={option.value}>
-                            {option.label}
-                        </option>
-                    ))}
-                </select>
-                {errorMessage && <p className={styles.error}>{errorMessage}</p>}
-            </>
-        );
-    }
-);
+                ))}
+            </select>
+            {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+        </>
+    );
+});
 CustomSelect.displayName = "CustomSelect";
