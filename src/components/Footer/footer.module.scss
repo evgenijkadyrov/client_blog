@@ -25,7 +25,6 @@
 
         h2 {
             width: 60%;
-
             @media screen and (max-width: 1150px) {
                 width: 100%;
             }
@@ -77,5 +76,11 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+    @media screen and (max-width: 1085px) {
+        margin-right: $margin_m10;
+    }
+    @media screen and (max-width: 768px) {
+        margin-right: $margin_m05;
     }
 }

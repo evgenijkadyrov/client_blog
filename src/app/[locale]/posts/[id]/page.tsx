@@ -34,6 +34,7 @@ const Post = async ({ params: { id } }: PostProps) => {
                         src={AvatarDefault as string}
                         alt={author}
                         className={styles.authorItemAvatar}
+                        fill
                     />
                     <div className={styles.authorItemInfo}>
                         <h3 className={styles.authorItemInfoName}>{author}</h3>

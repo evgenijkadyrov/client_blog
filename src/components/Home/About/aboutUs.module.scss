@@ -24,12 +24,20 @@
 .purpleBlock {
     width: 30%;
     background-color: $purple;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .articleWrapper {
     display: flex;
     justify-content: space-around;
     gap: $gap_g60;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: $gap_g10;
+    }
 }
 
 .about {
@@ -38,15 +46,15 @@
     background-color: $extra-light-purple;
 
     @media screen and (max-width: 568px) {
-        padding: $padding_p96 $padding_p40;
+        padding: $padding_p14 $padding_p20;
     }
 
     @media screen and (max-width: 480px) {
-        padding: $padding_p96 $padding_p10;
+        padding: $padding_p14 $padding_p10;
     }
 
     &Article {
-        width: $width_w500;
+        max-width: $width_w500;
 
         &:last-child {
             margin-right: 0;

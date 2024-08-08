@@ -2,13 +2,17 @@
 @import "src/styles/sizes";
 
 .top {
-    //position: relative;
-    height: $height_h600;
+    min-height: $height_h600;
     margin-bottom: $margin_m64;
     background-color: $extra-light-purple;
     display: flex;
     align-items: center;
-    gap: 140px;
+    gap: 20px;
+
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+        margin-bottom: $margin_m20;
+    }
 }
 
 .topInner {
@@ -16,13 +20,12 @@
     max-width: $width_w800;
     color: $dark-blue;
 
-    @media screen and (max-width: 568px) {
-        padding: $padding_p64 $padding_p20 $padding_p128;
+    @media screen and (max-width: 1085px) {
+        padding: $padding_p32 $padding_p20 $padding_p32;
+        max-width: $width_w450;
     }
-
-    @media screen and (max-width: 480px) {
-        padding-top: 60%;
-        padding-bottom: $padding_p10;
+    @media screen and (max-width: 768px) {
+        padding: $padding_p32 $padding_p20 $padding_p32;
     }
 }
 
@@ -34,14 +37,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @media screen and (max-width: 768px) {
-        height: 70%;
+    @media screen and (max-width: 1085px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 78px) {
+        width: 80%;
     }
     @media screen and (max-width: 568px) {
-        height: 60%;
+        width: 80%;
     }
     @media screen and (max-width: 480px) {
-        height: 50%;
+        width: 70%;
     }
 }
 
@@ -60,21 +66,8 @@
 .title {
     margin-bottom: $margin_m24;
 
-    @media screen and (max-width: 650px) {
-        font-size: $fontSize_f48;
-    }
-
-    @media screen and (max-width: 568px) {
-        font-size: $fontSize_f36;
-    }
-
-    @media screen and (max-width: 480px) {
-        font-size: $fontSize_f30;
-        line-height: $lineHeight_lh30;
-    }
-
-    @media screen and (max-width: 350px) {
-        font-size: $fontSize_f25;
+    @media screen and (max-width: 768px) {
+        margin-bottom: $margin_m10;
     }
 }
 
@@ -93,6 +86,12 @@
 .buttonWrapper {
     margin-top: $margin_m30;
     z-index: 99;
+    @media screen and (max-width: 1085px) {
+        margin-top: $margin_m15;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: $margin_m10;
+    }
 }
 
 .link {
@@ -101,10 +100,12 @@
     color: $dark-blue;
 }
 .testimonials {
-    margin: 64px 80px;
+    margin: $margin_m64 $margin_m80;
+    @media screen and (max-width: 768px) {
+        margin: $margin_m30 $margin_m40;
+    }
 }
 .blockTitle {
-    font-size: 48px;
     &::after {
         content: "";
         margin-top: 32px;

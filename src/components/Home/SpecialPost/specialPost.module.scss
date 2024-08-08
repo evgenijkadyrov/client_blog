@@ -6,15 +6,13 @@
     display: flex;
     padding: $padding_p64 0;
 
-    //@media screen and (max-width: 1280px) {
-    //   flex-wrap: wrap;
-    //}
+    @media screen and (max-width: 1280px) {
+        flex-wrap: wrap;
+    }
 
     &Content {
         position: absolute;
-        //left: -$left_m290;
         top: $position_p190;
-        // bottom: 0;
         right: $position_p300;
         padding: $padding_p60 $padding_p60 0;
 
@@ -56,6 +54,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        @media screen and (max-width: 768px) {
+            width: $width_w450;
+            height: $height_h350;
+        }
     }
 }
 .link {

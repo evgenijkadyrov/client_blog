@@ -4,7 +4,7 @@ import { MouseEvent, ReactNode } from "react";
 
 import styles from "./button.module.scss";
 
-interface CustomButtonProps {
+export interface CustomButtonProps {
     label?: string;
     bgcolor?: string;
     size?: "small" | "medium" | "large" | "full";
