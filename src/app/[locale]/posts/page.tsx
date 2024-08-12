@@ -1,7 +1,6 @@
-import React from "react";
 import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "components/Button";
 import { CategoryHome } from "components/Home/Category";
@@ -11,8 +10,8 @@ import { Posts } from "components/Posts";
 import "styles/globals.scss";
 import styles from "./blog.module.scss";
 
-const Blog = () => {
-    const t = useTranslations("Posts");
+const Blog = async () => {
+    const t = await getTranslations("Posts");
     return (
         <>
             <section className={styles.top}>
@@ -23,7 +22,9 @@ const Blog = () => {
                     <p className={styles.createdBy}>{t("postContent")}</p>
                     <div className={styles.buttonWrapper}>
                         <Button bgcolor="yellow">
-                            <Link href={`${AppRoutes.POSTS}/2`} className={styles.link}>
+                            <Link
+                                href={`${AppRoutes.POSTS}/2`}
+                                className={styles.link}>
                                 {t("buttonText")}
                             </Link>
                         </Button>

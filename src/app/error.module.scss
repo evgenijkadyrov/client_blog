@@ -1,0 +1,18 @@
+@import "src/styles/colors";
+
+.section {
+    padding: 64px 0;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    color: $dark-blue;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

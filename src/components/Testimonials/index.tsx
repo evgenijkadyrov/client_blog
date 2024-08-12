@@ -26,10 +26,16 @@ export const Testimonials = () => {
     return (
         <div className={styles.wrapperTestimonials}>
             <div className={styles.testimonials}>
-                <h6 className={styles.testimonialsSubTitle}>{t("Testimonials.subTitle")}</h6>
-                <h2 className={styles.testimonialsTitle}>{t("Testimonials.title")}</h2>
+                <h6 className={styles.testimonialsSubTitle}>
+                    {t("Testimonials.subTitle")}
+                </h6>
+                <h2 className={styles.testimonialsTitle}>
+                    {t("Testimonials.title")}
+                </h2>
 
-                <p className={styles.testimonialsDescription}>{t("Testimonials.description")}</p>
+                <p className={styles.testimonialsDescription}>
+                    {t("Testimonials.description")}
+                </p>
             </div>
             <div className={styles.review}>
                 {TESTIMONIALS_CARDS.map((review, index) => (
@@ -47,8 +53,12 @@ export const Testimonials = () => {
                                 className={styles.authorItemAvatar}
                             />
                             <div className={styles.authorItemInfo}>
-                                <h3 className={styles.authorItemInfoName}>{review.author}</h3>
-                                <p className={styles.authorItemInfoCity}>{review.from}</p>
+                                <h3 className={styles.authorItemInfoName}>
+                                    {review.author}
+                                </h3>
+                                <p className={styles.authorItemInfoCity}>
+                                    {review.from}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -56,13 +66,19 @@ export const Testimonials = () => {
 
                 <div className={styles.controls}>
                     <button
-                        className={classNames(styles.controlsButton, styles.controlsButtonPrev)}
+                        className={classNames(
+                            styles.controlsButton,
+                            styles.controlsButtonPrev
+                        )}
                         onClick={handlePrevClick}
                         aria-label="Previous">
                         <span className={styles.arrow} />
                     </button>
                     <button
-                        className={classNames(styles.controlsButton, styles.controlsButtonNext)}
+                        className={classNames(
+                            styles.controlsButton,
+                            styles.controlsButtonNext
+                        )}
                         onClick={handleNextClick}
                         aria-label="Next">
                         <span className={styles.arrow} />

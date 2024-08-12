@@ -3,8 +3,13 @@
     padding: $padding_p64 0 $padding_p128;
     max-width: $width_w500;
     margin: 0 auto;
-
     text-align: center;
+    @media screen and (max-width: 1085px) {
+        padding: $padding_p32 0 $padding_p32;
+    }
+    @media screen and (max-width: 768px) {
+        padding: $padding_p16 0 $padding_p32;
+    }
 }
 
 .title {

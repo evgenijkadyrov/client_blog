@@ -3,11 +3,11 @@
 
 .postsWrapper {
     padding: $padding_p64 0 $padding_p128;
-
     display: flex;
     align-items: flex-start;
 
     @media screen and (max-width: 1150px) {
+        padding: $padding_p32 0 $padding_p64;
         flex-direction: column;
         align-items: center;
     }
@@ -16,13 +16,16 @@
 .featuredPost {
     &Title {
         margin-bottom: $margin_m32;
+        @media screen and (max-width: 768px) {
+            margin-bottom: $margin_m05;
+        }
     }
 
     &Content {
-        padding: $padding_p32;
         border: $border_b01 solid $extra-light-grey;
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-right: $margin_m32;
 
         @media screen and (max-width: 1150px) {
@@ -51,6 +54,9 @@
     &Text {
         max-width: $width_w570;
         margin-bottom: $margin_m32;
+        @media screen and (max-width: 768px) {
+            max-width: $width_w450;
+        }
     }
 
     &Image {
@@ -113,33 +119,6 @@
     &Column {
         display: flex;
         flex-direction: column;
-    }
-}
-
-.post {
-    padding: $padding_p24 $padding_p150 $padding_p24 $padding_p32;
-    cursor: pointer;
-
-    @media screen and (max-width: 1300px) {
-        padding-right: $padding_p50;
-    }
-
-    @media screen and (max-width: 1150px) {
-        padding-right: 0;
-    }
-
-    @media screen and (max-width: 450px) {
-        padding-left: 0;
-    }
-
-    transition: all 0.3s linear;
-
-    &:hover {
-        background-color: $milk;
-    }
-
-    &Author {
-        margin-bottom: $margin_m08;
     }
 }
 

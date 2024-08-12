@@ -2,7 +2,7 @@ import { AUTHORS } from "constants/authors";
 import { POSTS_LIST } from "constants/posts";
 import { Link } from "navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Container from "components/Container";
 import { PostItem } from "components/Post";
@@ -14,8 +14,8 @@ interface AuthorPageProps {
     params: { id: string };
 }
 
-const AuthorPage = ({ params: { id } }: AuthorPageProps) => {
-    const t = useTranslations("Author");
+const AuthorPage = async ({ params: { id } }: AuthorPageProps) => {
+    const t = await getTranslations("Author");
     const authorInfo = AUTHORS.find((author) => author.id === parseInt(id, 10));
     if (!authorInfo) {
         return null;
@@ -35,7 +35,12 @@ const AuthorPage = ({ params: { id } }: AuthorPageProps) => {
         <>
             <section className={styles.top}>
                 <div className={styles.topInner}>
-                    <Image src={img} alt="author" loading="lazy" className={styles.topImage} />
+                    <Image
+                        src={img}
+                        alt="author"
+                        loading="lazy"
+                        className={styles.topImage}
+                    />
                     <div className={styles.topContent}>
                         <h1 className={styles.topTitle}>
                             {t("top.title.firstPart")}
@@ -64,7 +69,9 @@ const AuthorPage = ({ params: { id } }: AuthorPageProps) => {
                 <section className={styles.posts}>
                     {authorPosts.length > 0 ? (
                         <>
-                            <h2 className={styles.postsTitle}>{t("posts.title")}</h2>
+                            <h2 className={styles.postsTitle}>
+                                {t("posts.title")}
+                            </h2>
                             <div className={styles.postsRow}>
                                 {authorPosts.map((post) => (
                                     <PostItem key={post.id} post={post} />
@@ -72,7 +79,9 @@ const AuthorPage = ({ params: { id } }: AuthorPageProps) => {
                             </div>
                         </>
                     ) : (
-                        <h2 className={styles.postsSecondTitle}>{t("posts.secondTitle")}</h2>
+                        <h2 className={styles.postsSecondTitle}>
+                            {t("posts.secondTitle")}
+                        </h2>
                     )}
                 </section>
             </Container>

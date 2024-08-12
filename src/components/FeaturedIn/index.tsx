@@ -1,4 +1,3 @@
-import React from "react";
 import { LOGOS } from "constants/logos";
 import Image from "next/image";
 
@@ -11,7 +10,13 @@ const FeaturedIn = () => (
             <h4>Featured in</h4>
         </div>
         {LOGOS.map(({ id, img, alt }) => (
-            <Image key={id} src={img} alt={alt} className={styles.logosItem} loading="lazy" />
+            <Image
+                key={id}
+                src={img}
+                alt={alt}
+                className={styles.logosItem}
+                loading="lazy"
+            />
         ))}
     </div>
 );

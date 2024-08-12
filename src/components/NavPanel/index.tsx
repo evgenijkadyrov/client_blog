@@ -7,6 +7,7 @@ import { AppRoutes } from "constants/routerPath";
 import { Link, usePathname } from "navigation";
 import { useTranslations } from "next-intl";
 
+import "styles/globals.scss";
 import styles from "./navPanel.module.scss";
 
 interface NavPanelProps {
@@ -37,14 +38,16 @@ export const NavPanel = ({ full }: NavPanelProps) => {
             <Link href={`/${AppRoutes.HOME}`} className={styles.homeLink}>
                 {t("appName")}
             </Link>
-            {/** !/ */}
-            {/* <input id={styles.menuToggle} type="checkbox" /> */}
+
+            {/* <input id="menuToggle" type="checkbox"/> */}
             {/* <label */}
-            {/*   className={classNames(styles.menuBtn, full && styles.menuBtnFull)} */}
-            {/*   htmlFor={styles.menuToggle}> */}
-            {/*   <span /> */}
+            {/*    className={classNames(styles.menuBtn, full && styles.menuBtnFull)} */}
+            {/*    htmlFor="menuToggle"> */}
+            {/*    <span/> */}
             {/* </label> */}
-            <nav className={classNames(styles.nav, full && styles.navFull)}>{renderNav()}</nav>
+            <nav className={classNames(styles.nav, full && styles.navFull)}>
+                {renderNav()}
+            </nav>
         </div>
     );
 };

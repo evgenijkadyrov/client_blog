@@ -6,7 +6,7 @@ import Image_5 from "assets/images/posts/two-women-in-front-of-dry-erase-board-1
 import Image_4 from "assets/images/posts/white-concrete-building-1838640.jpg";
 import { StaticImageData } from "next/image";
 
-interface ContentProps {
+export interface ContentProps {
     id: number;
     title: string;
     text: string;

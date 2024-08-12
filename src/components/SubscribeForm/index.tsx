@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { subscribeFormSchema } from "validations/emailShema";
 
 import { Button } from "components/Button";
+import { CustomInput } from "components/Input";
 
 import styles from "./subscribeForm.module.scss";
 
@@ -51,8 +52,7 @@ export const SubscribeForm = () => {
     return (
         <div className={styles.formWrapper}>
             <form className={styles.form} onSubmit={handleSendEmail}>
-                <input
-                    className={styles.input}
+                <CustomInput
                     type="text"
                     name="email"
                     placeholder={t("formEmail")}
@@ -62,7 +62,10 @@ export const SubscribeForm = () => {
                     onBlur={onBlurHandler}
                 />
 
-                <Button bgcolor="yellow" onClick={handleSendEmail} type="submit">
+                <Button
+                    bgcolor="yellow"
+                    onClick={handleSendEmail}
+                    type="submit">
                     {t("buttonSubscribe")}
                 </Button>
             </form>

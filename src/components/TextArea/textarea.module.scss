@@ -1,0 +1,20 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+.textArea {
+    height: $height_h150;
+    width: 100%;
+    padding: $padding_p14 0 $padding_p14 $padding_p24;
+    margin-right: $margin_m24;
+    margin-bottom: $margin_m20;
+    background-color: transparent;
+    color: $dark-blue;
+    border: solid $border_b01 $dark-grey;
+    font-size: $fontSize_f16;
+
+    &::placeholder {
+        color: $light-grey;
+    }
+}
+.error {
+    color: $red;
+}

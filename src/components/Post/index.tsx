@@ -36,7 +36,10 @@ export const PostItem = ({
                 src={img}
                 alt={title}
                 loading="lazy"
-                className={classNames(styles.postImage, small && styles.postImageSmall)}
+                className={classNames(
+                    styles.postImage,
+                    small && styles.postImageSmall
+                )}
             />
             <div className={styles.postContent}>
                 {column ? (

@@ -23,7 +23,12 @@ export const ModalVideo = () => {
     return (
         <>
             <div className={styles.button}>
-                <Button onClick={handleClick} label={t("Button")} bgcolor="white" size="large" />
+                <Button
+                    onClick={handleClick}
+                    label={t("Button")}
+                    bgcolor="white"
+                    size="large"
+                />
             </div>
             {isModalOpen && (
                 <div

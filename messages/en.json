@@ -160,5 +160,40 @@
       "title": "My Posts",
       "secondTitle": "No Posts"
     }
+  },
+  "ContactPage": {
+    "top": {
+      "subTitle": "Contact us",
+      "title": "Let’s Start a Conversation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."
+    },
+    "header": {
+      "block_1": {
+        "title": "Working hours",
+        "days": "Monday To Friday",
+        "time": "9:00 AM to 8:00 PM",
+        "description": "Our Support Team is available 24/7"
+      },
+      "block_2": {
+        "title": "Contact us"
+      }
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Message",
+      "button": "Send message",
+      "queryPlaceholder": "Query Related",
+      "queries": {
+        "Authorization Problem": "Authorization Problem",
+        "Display Issue": "Display Issue",
+        "URL of Problematic Page": "URL of Problematic Page",
+        "Browser and Device of Issue": "Browser and Device of Issue",
+        "Nature of the Problem": "Nature of the Problem",
+        "Problem Importance": "Problem Importance",
+        "Suggestions for Improvement": "Suggestions for Improvement",
+        "Additional Comments": "Additional Comments"
+      }
+    }
   }
 }

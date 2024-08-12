@@ -1,8 +1,6 @@
-"use client";
-
 import { keysCategory } from "constants/keysCategory";
 import { POSTS_LIST } from "constants/posts";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Container from "components/Container";
 import { PostsFiltered } from "components/PostsFiltered";
@@ -15,18 +13,28 @@ interface CategoryProps {
         id: string;
     };
 }
-const Category = ({ params: { id } }: CategoryProps) => {
-    const t = useTranslations("HomeHero");
+
+const Category = async ({ params: { id } }: CategoryProps) => {
+    const t = await getTranslations("HomeHero");
     const foundCategory = keysCategory.find((el) => el.id === id);
     const { category } = foundCategory || { category: "" };
-    const postsFiltered = POSTS_LIST.filter((post) => post.category.toLowerCase() === id);
+    const postsFiltered = POSTS_LIST.filter(
+        (post) => post.category.toLowerCase() === id
+    );
     return (
         <>
             <section className={styles.top}>
                 <div className={styles.topInner}>
-                    <h1 className={styles.topInnerTitle}>{t(`${category}.title`)}</h1>
-                    <p className={styles.topInnerDescription}>{t(`${category}.description`)}</p>
-                    <h5 className={styles.topInnerBroadcast}> BLOG `&gt;` {id}</h5>
+                    <h1 className={styles.topInnerTitle}>
+                        {t(`${category}.title`)}
+                    </h1>
+                    <p className={styles.topInnerDescription}>
+                        {t(`${category}.description`)}
+                    </p>
+                    <h5 className={styles.topInnerBroadcast}>
+                        {" "}
+                        BLOG &gt; {id}
+                    </h5>
                 </div>
             </section>
             <Container>

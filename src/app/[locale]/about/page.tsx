@@ -1,11 +1,10 @@
-import React from "react";
 import ImageBgr from "assets/images/about/background.jpg";
 import Image_1 from "assets/images/about/ground-group-growth-hands-461049.jpg";
 import Image_2 from "assets/images/about/three-persons-sitting-on-the-stairs-talking-with-each-other-1438072.jpg";
 import { AUTHORS } from "constants/authors";
 import { getRandomElements } from "helpers/randomAuthorList";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Container from "components/Container";
 import { AuthorsBlock } from "components/Home/Authors";
@@ -14,8 +13,8 @@ import { JoinUsHome } from "components/Home/JoinUs";
 import "styles/globals.scss";
 import styles from "./about.module.scss";
 
-const About = () => {
-    const t = useTranslations("About");
+const About = async () => {
+    const t = await getTranslations("About");
     const authors = getRandomElements(AUTHORS, 8);
 
     return (
@@ -30,7 +29,12 @@ const About = () => {
                 </div>
             </section>
             <section className={styles.stats}>
-                <Image src={ImageBgr} alt="ImageBgr" loading="lazy" className={styles.statsImage} />
+                <Image
+                    src={ImageBgr}
+                    alt="ImageBgr"
+                    loading="lazy"
+                    className={styles.statsImage}
+                />
                 <div className={styles.whiteBlock} />
                 <div className={styles.yellowBlock} />
                 <div className={styles.purpleBlock} />
@@ -58,7 +62,9 @@ const About = () => {
                         <h3 className={styles.misionVisionTitle}>
                             {t("misionVision.block_1.title")}
                         </h3>
-                        <p className={styles.misionVisionText}>{t("misionVision.block_1.text")}</p>
+                        <p className={styles.misionVisionText}>
+                            {t("misionVision.block_1.text")}
+                        </p>
                     </article>
                     <article className={styles.misionVisionBlock}>
                         <h5 className={styles.misionVisionSupTitle}>
@@ -67,34 +73,52 @@ const About = () => {
                         <h3 className={styles.misionVisionTitle}>
                             {t("misionVision.block_2.title")}
                         </h3>
-                        <p className={styles.misionVisionText}>{t("misionVision.block_2.text")}</p>
+                        <p className={styles.misionVisionText}>
+                            {t("misionVision.block_2.text")}
+                        </p>
                     </article>
                 </div>
             </section>
             <section className={styles.descriptionRow}>
                 <article className={styles.descriptionContent}>
-                    <h2 className={styles.descriptionTitle}>{t("description.block_1.title")}</h2>
+                    <h2 className={styles.descriptionTitle}>
+                        {t("description.block_1.title")}
+                    </h2>
                     <h4 className={styles.descriptionSubTitle}>
                         {t("description.block_1.subTitle")}
                     </h4>
-                    <p className={styles.descriptionText}>{t("description.block_1.text")}</p>
+                    <p className={styles.descriptionText}>
+                        {t("description.block_1.text")}
+                    </p>
                 </article>
                 <div className={styles.descriptionImage}>
-                    <Image src={Image_1} alt="ground-group-growth-hands" loading="lazy" />
+                    <Image
+                        src={Image_1}
+                        alt="ground-group-growth-hands"
+                        loading="lazy"
+                    />
                     <div className={styles.figure_1} />
                 </div>
             </section>
             <section className={styles.descriptionRow}>
                 <div className={styles.descriptionImage}>
-                    <Image src={Image_2} alt="three-persons-sitting-on-the-stairs" loading="lazy" />
+                    <Image
+                        src={Image_2}
+                        alt="three-persons-sitting-on-the-stairs"
+                        loading="lazy"
+                    />
                     <div className={styles.figure_2} />
                 </div>
                 <article className={styles.descriptionContent}>
-                    <h2 className={styles.descriptionTitle}>{t("description.block_1.title")}</h2>
+                    <h2 className={styles.descriptionTitle}>
+                        {t("description.block_1.title")}
+                    </h2>
                     <h4 className={styles.descriptionSubTitle}>
                         {t("description.block_2.subTitle")}
                     </h4>
-                    <p className={styles.descriptionText}>{t("description.block_1.text")}</p>
+                    <p className={styles.descriptionText}>
+                        {t("description.block_1.text")}
+                    </p>
                 </article>
             </section>
             <Container>

@@ -12,14 +12,18 @@
 }
 .button-small {
     width: $width_w150;
-    padding: $padding_p16 $padding_p16;
+    padding: $padding_p10 $padding_p10;
 }
 .button-medium {
-    padding: $padding_p16 $padding_p35;
+    padding: $padding_p10 $padding_p10;
     width: $width_w200;
 }
 .button-large {
     width: $width_w260;
+    padding: $padding_p10 $padding_p10;
+}
+.button-full {
+    width: 100%;
     padding: $padding_p16 $padding_p16;
 }
 .button-white {
@@ -34,5 +38,12 @@
     color: $dark-blue;
     &:hover {
         background-color: $yellow-hover;
+    }
+}
+.button-disabled {
+    background-color: $light-grey;
+    cursor: default;
+    &:hover {
+        background-color: $light-grey;
     }
 }

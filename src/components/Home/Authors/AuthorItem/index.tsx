@@ -17,7 +17,9 @@ interface AuthorItemProps {
     };
 }
 
-export const AuthorItem = ({ author: { name, role, img, socials, id } }: AuthorItemProps) => {
+export const AuthorItem = ({
+    author: { name, role, img, socials, id },
+}: AuthorItemProps) => {
     const router = useRouter();
 
     const clickHandlerAuthor = (): void => {
