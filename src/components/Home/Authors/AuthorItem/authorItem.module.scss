@@ -1,0 +1,44 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.card {
+    width: $width_w300;
+    height: $height_h320;
+    padding: $padding_p40 $padding_p20;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $extra-light-grey;
+
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+        background-color: $milk;
+    }
+}
+
+.socials {
+    a {
+        margin-right: $margin_m15;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.imageWrapper {
+    margin-bottom: $margin_m20;
+}
+.name {
+}
+.role {
+    margin-bottom: $margin_m20;
+
+    font-size: $fontSize_f14;
+
+    color: $dark-grey;
+}

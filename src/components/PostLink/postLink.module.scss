@@ -1,0 +1,30 @@
+@import "src/styles/sizes";
+@import "src/styles/colors";
+
+.post {
+    padding: $padding_p24 $padding_p150 $padding_p24 $padding_p32;
+    cursor: pointer;
+
+    @media screen and (max-width: 1085px) {
+        padding: $padding_p14 $padding_p64 $padding_p14 $padding_p16;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: $padding_p10 $padding_p32 $padding_p10 $padding_p10;
+        text-align: center;
+    }
+
+    transition: all 0.3s linear;
+
+    &:hover {
+        background-color: $milk;
+    }
+
+    &Author {
+        margin-bottom: $margin_m08;
+    }
+}
+.title {
+    max-width: $width_w670;
+    margin-bottom: $margin_m16;
+}

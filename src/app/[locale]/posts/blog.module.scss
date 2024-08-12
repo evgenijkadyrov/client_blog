@@ -1,0 +1,118 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.top {
+    min-height: $height_h600;
+    margin-bottom: $margin_m64;
+    background-color: $extra-light-purple;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media screen and (max-width: 920px) {
+        flex-direction: column;
+        margin-bottom: $margin_m20;
+    }
+}
+
+.topInner {
+    padding: $padding_p96 0 0 $padding_p80;
+    max-width: $width_w800;
+    color: $dark-blue;
+
+    @media screen and (max-width: 1085px) {
+        padding: $padding_p32 $padding_p20 $padding_p32;
+        max-width: $width_w450;
+    }
+    @media screen and (max-width: 768px) {
+        padding: $padding_p32 $padding_p20 $padding_p32;
+    }
+}
+
+.imageFirst {
+    background-image: url("../../../assets/images/posts/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-840996.jpg");
+    width: 515px;
+    height: 360px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 1085px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 78px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 568px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 480px) {
+        width: 70%;
+    }
+}
+
+.subTitle {
+    margin-bottom: $margin_m24;
+
+    font-weight: $fontWeight_500;
+    letter-spacing: $letterSpacing_l02;
+    text-transform: uppercase;
+
+    span {
+        font-weight: $fontWeight_700;
+    }
+}
+
+.title {
+    margin-bottom: $margin_m24;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: $margin_m10;
+    }
+}
+
+.createdBy {
+    margin-bottom: $margin_m15;
+
+    span {
+        color: $yellow;
+    }
+
+    &:last-child {
+        margin-bottom: $margin_m48;
+    }
+}
+
+.buttonWrapper {
+    margin-top: $margin_m30;
+    z-index: 99;
+    @media screen and (max-width: 1085px) {
+        margin-top: $margin_m15;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: $margin_m10;
+    }
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark-blue;
+}
+.testimonials {
+    margin: $margin_m64 $margin_m80;
+    @media screen and (max-width: 768px) {
+        margin: $margin_m30 $margin_m40;
+    }
+}
+.blockTitle {
+    &::after {
+        content: "";
+        margin-top: 32px;
+        display: block;
+        width: 100%;
+        height: $border_b02;
+        background: $extra-light-grey;
+        transition: all 0.3s linear;
+    }
+}

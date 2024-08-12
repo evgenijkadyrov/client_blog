@@ -1,0 +1,68 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.whyWeStarted {
+    position: relative;
+    display: flex;
+    padding: $padding_p64 0;
+
+    @media screen and (max-width: 1280px) {
+        flex-wrap: wrap;
+    }
+
+    &Content {
+        position: absolute;
+        top: $position_p190;
+        right: $position_p300;
+        padding: $padding_p60 $padding_p60 0;
+
+        max-width: $width_w730;
+        height: $height_h580;
+        background-color: $white;
+        z-index: 2;
+
+        @media screen and (max-width: 850px) {
+            position: static;
+            padding-bottom: 0;
+        }
+
+        @media screen and (max-width: 575px) {
+            padding: $padding_p80 0;
+        }
+    }
+
+    &SupTitle {
+        margin-bottom: $margin_m24;
+        font-weight: $fontWeight_500;
+        letter-spacing: $letterSpacing_l02;
+        text-transform: uppercase;
+    }
+
+    &Title {
+        margin-bottom: $margin_m16;
+    }
+
+    &Text {
+        margin-bottom: $margin_m30;
+        color: $dark-grey;
+    }
+
+    &Image {
+        background-image: url("../../../assets/images/home/people.webp");
+        width: $width_w950;
+        height: $height_h705;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: 768px) {
+            width: $width_w450;
+            height: $height_h350;
+        }
+    }
+}
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark-blue;
+}

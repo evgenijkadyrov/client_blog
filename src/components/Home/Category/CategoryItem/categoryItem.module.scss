@@ -1,0 +1,56 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.categoryBlock {
+    width: $width_w300;
+    height: $height_h320;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $padding_p32;
+    border: solid $border_b01 $extra-light-grey;
+
+    &:hover {
+        background: $yellow-hover;
+        cursor: pointer;
+    }
+
+    &Icon {
+        width: $width_w50;
+        height: $height_h50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $milk;
+        border-radius: $border-radius_br10;
+        transition: all 0.3s linear;
+
+        &:hover {
+            background-color: $yellow;
+            border-color: $yellow;
+
+            .iconWrapper {
+                background-color: $white;
+            }
+        }
+
+        @media screen and (max-width: 1350px) {
+            margin-bottom: $margin_m30;
+        }
+    }
+
+    &Title {
+        margin-bottom: $margin_m05;
+        margin-top: $margin_m05;
+    }
+
+    &Description {
+    }
+    &Short {
+        flex-direction: row;
+        height: 96px;
+        padding: $padding_p32;
+        gap: 16px;
+        align-items: center;
+    }
+}

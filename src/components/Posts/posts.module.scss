@@ -1,0 +1,26 @@
+@import "src/styles/sizes";
+.postsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap_g60;
+    @media screen and (max-width: 1085px) {
+        gap: $gap_g32;
+    }
+    @media screen and (max-width: 768px) {
+        gap: $gap_g10;
+    }
+}
+.buttonWrapper {
+    display: flex;
+    gap: $gap_g10;
+    justify-content: center;
+}
+.button {
+    font-size: $fontSize_f28;
+    font-weight: $fontWeight_700;
+    border: none;
+    background-color: transparent;
+    &:hover {
+        cursor: pointer;
+    }
+}

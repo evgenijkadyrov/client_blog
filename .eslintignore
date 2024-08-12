@@ -5,3 +5,4 @@ yarn.lock
 vite.config.ts
 cypress.config.ts
 /src/stories
+i18n.ts

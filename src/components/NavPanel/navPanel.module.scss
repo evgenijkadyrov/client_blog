@@ -1,0 +1,148 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    &Full {
+        .link:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+        position: fixed;
+        visibility: hidden;
+        top: -100%;
+        left: 50%;
+
+        height: 100%;
+        width: 100%;
+        gap: $margin_m20;
+        padding: $padding_p20 0;
+        flex-direction: column;
+
+        background-color: $dark-blue;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
+
+.menuBtn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: $width_w40;
+    height: $height_h40;
+    cursor: pointer;
+    z-index: 1;
+
+    &Full {
+        display: none;
+    }
+
+    @media screen and (min-width: 920px) {
+        display: none;
+    }
+}
+
+.menuBtn > span,
+.menuBtn > span::before,
+.menuBtn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: $height_h03;
+    background-color: $white;
+}
+
+.menuBtn > span::before {
+    content: "";
+    top: -$margin_m08;
+}
+
+.menuBtn > span::after {
+    content: "";
+    top: $margin_m08;
+}
+
+#menuToggle {
+    position: absolute;
+    opacity: 0;
+}
+
+#menuToggle:checked ~ .menuBtn > span {
+    transform: rotate(45deg);
+}
+
+#menuToggle:checked ~ .menuBtn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menuToggle:checked ~ .menuBtn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menuToggle:checked ~ .nav {
+    visibility: visible;
+    top: $height_h80;
+}
+
+.homeLink {
+    font-weight: $fontWeight_700;
+    font-size: $fontSize_f25;
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 400px) {
+        font-size: $fontSize_f20;
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 auto;
+
+    @media screen and (max-width: 920px) {
+        justify-content: space-around;
+        gap: 20%;
+    }
+}
+
+.link {
+    margin-right: $margin_m24;
+    color: $white;
+    text-decoration: none;
+    font-size: $fontSize_f18;
+
+    transition: all 0.3s linear;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: $height_h02;
+
+        background: $white;
+        transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &Active {
+        cursor: default;
+        pointer-events: none;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}

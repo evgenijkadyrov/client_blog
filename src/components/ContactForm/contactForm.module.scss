@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+
+.contact_wrapper {
+    min-height: 600px;
+    max-width: 768px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .contacts {
+        width: 100%;
+        //display: flex;
+        //flex-direction: column;
+        //align-items: center;
+        //justify-content: space-between;
+
+        .form {
+            //min-width: 270px;
+            // max-width: 768px;
+            //width: 100%;
+            display: flex;
+            flex-direction: column;
+            //align-items: center;
+            //justify-content: center;
+            color: $white;
+            margin-top: 40px;
+            margin-bottom: 30px;
+
+            .label {
+                margin-bottom: 10px;
+                color: $dark-blue;
+            }
+
+            .status {
+                font-size: 24px;
+                margin: 10px;
+                color: #4d58ec;
+            }
+        }
+    }
+}
+.input {
+    color: $dark-blue !important;
+}

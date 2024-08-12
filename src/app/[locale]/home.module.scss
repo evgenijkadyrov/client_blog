@@ -1,0 +1,18 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark-blue;
+}
+
+.aboutContainer {
+    margin: 80px;
+}
+
+.categoryTitle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $margin_m48;
+}

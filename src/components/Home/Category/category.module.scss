@@ -1,0 +1,15 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.category {
+    &Row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "NavPanel": {
+    "appName": "Modsen Client Blog",
+    "Home": "Home",
+    "Blog": "Blog",
+    "About Us": "About Us",
+    "Contact Us": "Contact Us",
+    "Privacy Policy": "Privacy Policy"
+  },
+  "ModalVideo": {
+    "Button": "Video about us"
+  },
+  "HomeHero": {
+    "heroLabel": "Posted on ",
+    "heroLabelSpan": "startup",
+    "heroTitle": "The Art of Pairing Fonts: A Comprehensive Guide",
+    "heroCreatedAt": {
+      "begin": "By ",
+      "colorSpan": "Natalie Chen ",
+      "end": "|  May 23, 2024"
+    },
+    "heroDescription": "Choosing the right font combinations is crucial for creating visually appealing designs. Understanding how different fonts work together can elevate your project and make it stand out.",
+    "buttonText": "Read more >",
+    "Posts": {
+      "postsTitle": "Featured Posts",
+      "postAuthor": "By John Doe   l   May 23, 2022",
+      "postTitle": "Navigating Cybersecurity Challenges in the Digital Age",
+      "postContent": "Cybersecurity threats pose significant risks to businesses in the digital era. Learn how to implement robust cybersecurity measures to protect sensitive data and safeguard against cyber attacks."
+    },
+    "AllPosts": {
+      "mainTitle": "All Posts",
+      "linkView": "View All"
+    },
+    "AboutUs": {
+      "subTitleFirst": "About us",
+      "titleFirst": "We are a community of content writers who share their learnings",
+      "descriptionFirst": "Join us on a journey of knowledge sharing and creative exploration as we delve into diverse topics and perspectives.",
+      "subTitleSecond": "Our Mission",
+      "titleSecond": "Creating valuable content for creatives all around the world",
+      "descriptionSecond": "Our mission is to inspire and empower creatives globally through engaging content that sparks creativity and fosters growth.",
+      "linkText": "Read More >"
+    },
+    "Category": {
+      "title": "Choose A Category",
+      "titleForCategories": "Categories",
+      "searchPlaceholder": "Search by tag...",
+      "searchButton": "Search",
+      "Cards": {
+        "business": {
+          "icon": "/business.svg",
+          "title": "Business",
+          "description": "Explore the latest trends and strategies in the world of business, from management insights to entrepreneurial success stories."
+        },
+        "startUp": {
+          "icon": "/startup.svg",
+          "title": "Startup",
+          "description": "Learn how to navigate the challenges and opportunities of launching and growing a startup, with tips from industry experts and successful entrepreneurs."
+        },
+        "economy": {
+          "icon": "/economy.svg",
+          "title": "Economy",
+          "description": "Stay informed on global economic trends, financial markets, and key indicators affecting businesses and consumers worldwide."
+        },
+        "technology": {
+          "icon": "/technology.svg",
+          "title": "Technology",
+          "description": "Discover cutting-edge innovations, tech trends, and the impact of technology on society in this dynamic and ever-evolving digital age."
+        }
+      }
+    },
+    "Tags": {
+      "title": "All Tags"
+    },
+    "WhyWeStarted": {
+      "subTitle": "Why we started",
+      "title": "It started out as a simple idea and evolved into our passion",
+      "description": "We created our blog site to share our passion and expertise with a broader audience. It's a platform where we can express ourselves, inspire others, and provide valuable insights on topics we deeply care about. Through our blog, we aim to connect with like-minded individuals, build a community, and make a positive impact by sharing our unique perspective and experiences.",
+      "buttonText": "Discovery our story >"
+    },
+    "ListOfAuthor": {
+      "title": "List of Authors"
+    },
+    "Testimonials": {
+      "subTitle": "Testimonials",
+      "title": "What people say about our blog",
+      "description": "Placeholder text for the testimonial section"
+    }
+  },
+  "JoinUs": {
+    "title": "Join our team to be a part of our story",
+    "description": "Updated description here ",
+    "buttonText": "Join now"
+  },
+  "Footer": {
+    "title": "Subscribe to our news letter to get latest updates and news",
+    "buttonSubscribe": "Subscribe",
+    "formEmail": "Enter your email",
+    "label": "Change language",
+    "locale": "{locale, select, be {b🇪 Belarus} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Posts": {
+    "postSubtitle": "Featured Posts",
+    "postTitle": "The Art of Mindful Productivity: Balancing Work and Well-being",
+    "postAuthor": "By John Doe   l   May 23, 2022",
+    "postContent": "Discover the secrets to enhancing productivity while prioritizing your well-being. Learn how to strike a balance between work demands and self-care for a fulfilling and sustainable lifestyle.",
+    "buttonText": "Read more >",
+    "postsBlockTitle": "All posts",
+    "allCategories": "All categories"
+  },
+  "Post": {
+    "postsTitle": "What to read next"
+  },
+  "About": {
+    "top": {
+      "subTitle": "about us",
+      "title": "We are a team of content writers who share their learnings",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "stats": {
+      "blogs": "Blogs Published",
+      "views": "Views on Finsweet",
+      "users": "Total active Users"
+    },
+    "misionVision": {
+      "block_1": {
+        "supTitle": "Our Mision",
+        "title": "Creating valuable content for creatives all around the world",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      },
+      "block_2": {
+        "supTitle": "Our Vision",
+        "title": "A platform that empowers individuals to improve",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      }
+    },
+    "description": {
+      "block_1": {
+        "subTitle": "Our team of creatives",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      },
+      "block_2": {
+        "subTitle": "Why we started this Blog",
+        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      }
+    }
+  },
+  "Author": {
+    "top": {
+      "title": {
+        "firstPart": "Hey there, I’m ",
+        "secondPart": " and welcome to my Blog"
+      }
+    },
+    "posts": {
+      "title": "My Posts",
+      "secondTitle": "No Posts"
+    }
+  },
+  "ContactPage": {
+    "top": {
+      "subTitle": "Contact us",
+      "title": "Let’s Start a Conversation",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim."
+    },
+    "header": {
+      "block_1": {
+        "title": "Working hours",
+        "days": "Monday To Friday",
+        "time": "9:00 AM to 8:00 PM",
+        "description": "Our Support Team is available 24/7"
+      },
+      "block_2": {
+        "title": "Contact us"
+      }
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Your Email",
+      "message": "Message",
+      "button": "Send message",
+      "queryPlaceholder": "Query Related",
+      "queries": {
+        "Authorization Problem": "Authorization Problem",
+        "Display Issue": "Display Issue",
+        "URL of Problematic Page": "URL of Problematic Page",
+        "Browser and Device of Issue": "Browser and Device of Issue",
+        "Nature of the Problem": "Nature of the Problem",
+        "Problem Importance": "Problem Importance",
+        "Suggestions for Improvement": "Suggestions for Improvement",
+        "Additional Comments": "Additional Comments"
+      }
+    }
+  }
+}

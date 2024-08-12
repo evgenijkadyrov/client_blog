@@ -1,0 +1,119 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+
+.top {
+    position: relative;
+    height: $height_h720;
+    margin-bottom: $margin_m64;
+}
+
+.topBackground {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue;
+    opacity: 0.3;
+
+    z-index: 2;
+
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.topInner {
+    position: relative;
+    padding: $padding_p128 0 0 $padding_p80;
+    max-width: $width_w800;
+    color: $white;
+    z-index: 3;
+
+    @media screen and (max-width: 568px) {
+        padding: $padding_p64 $padding_p20 $padding_p128;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding-top: 60%;
+        padding-bottom: $padding_p10;
+    }
+}
+
+.imageFirst {
+    position: absolute;
+    left: 0;
+    background-image: url("../../../assets/images/home/background.webp");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+        height: 70%;
+    }
+    @media screen and (max-width: 568px) {
+        height: 60%;
+    }
+    @media screen and (max-width: 480px) {
+        height: 50%;
+    }
+}
+
+.heroLabel {
+    margin-bottom: $margin_m24;
+
+    font-weight: $fontWeight_500;
+    letter-spacing: $letterSpacing_l02;
+    text-transform: uppercase;
+
+    span {
+        font-weight: $fontWeight_700;
+    }
+}
+
+.heroTitle {
+    margin-bottom: $margin_m24;
+
+    font-size: $fontSize_f56;
+
+    @media screen and (max-width: 650px) {
+        font-size: $fontSize_f48;
+    }
+
+    @media screen and (max-width: 568px) {
+        font-size: $fontSize_f36;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: $fontSize_f30;
+        line-height: $lineHeight_lh30;
+    }
+
+    @media screen and (max-width: 350px) {
+        font-size: $fontSize_f25;
+    }
+}
+
+.heroCreatedAt {
+    margin-bottom: $margin_m15;
+
+    span {
+        color: $yellow;
+    }
+
+    &:last-child {
+        margin-bottom: $margin_m48;
+    }
+}
+
+.buttonWrapper {
+    margin-top: $margin_m30;
+    z-index: 99;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark-blue;
+}

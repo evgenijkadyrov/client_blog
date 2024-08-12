@@ -1,0 +1,52 @@
+@import "src/styles/colors";
+@import "src/styles/sizes";
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $gap_g20;
+    z-index: 2;
+
+    @media screen and (max-width: 1150px) {
+        width: 90%;
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 90%;
+    }
+
+    @media screen and (max-width: 575px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+}
+.input {
+    height: $height_h56;
+    width: $width_w320;
+    padding: $padding_p14 0 $padding_p14 $padding_p24;
+    margin-right: $margin_m24;
+    background-color: transparent;
+    color: $white;
+    border: solid $border_b01 $purple;
+    font-size: $fontSize_f16;
+
+    &::placeholder {
+        color: $light-grey;
+    }
+}
+
+.error {
+    margin-top: $margin_m05;
+}
