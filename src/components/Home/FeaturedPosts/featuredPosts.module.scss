@@ -25,6 +25,7 @@
         border: $border_b01 solid $extra-light-grey;
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-right: $margin_m32;
 
         @media screen and (max-width: 1150px) {
