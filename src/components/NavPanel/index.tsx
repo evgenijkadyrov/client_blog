@@ -6,7 +6,8 @@ import { LINKS } from "constants/navPanelItems";
 import { AppRoutes } from "constants/routerPath";
 import { Link, usePathname } from "navigation";
 import { useTranslations } from "next-intl";
-import 'styles/globals.scss'
+
+import "styles/globals.scss";
 import styles from "./navPanel.module.scss";
 
 interface NavPanelProps {
