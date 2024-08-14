@@ -19,7 +19,7 @@ const Category = async ({ params: { id } }: CategoryProps) => {
     const foundCategory = keysCategory.find((el) => el.id === id);
     const { category } = foundCategory || { category: "" };
     const postsFiltered = POSTS_LIST.filter(
-        (post) => post.category.toLowerCase() === id
+        ({ category }) => category.toLowerCase() === id
     );
     return (
         <>

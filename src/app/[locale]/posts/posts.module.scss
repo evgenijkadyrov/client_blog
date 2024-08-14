@@ -7,7 +7,7 @@
     background-color: $extra-light-purple;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: $gap_g20;
 
     @media screen and (max-width: 920px) {
         flex-direction: column;
@@ -31,8 +31,8 @@
 
 .imageFirst {
     background-image: url("../../../assets/images/posts/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-840996.jpg");
-    width: 515px;
-    height: 360px;
+    width: $width_w516;
+    height: $height_h360;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +53,6 @@
 
 .subTitle {
     margin-bottom: $margin_m24;
-
     font-weight: $fontWeight_500;
     letter-spacing: $letterSpacing_l02;
     text-transform: uppercase;
@@ -108,7 +107,7 @@
 .blockTitle {
     &::after {
         content: "";
-        margin-top: 32px;
+        margin-top: $margin_m30;
         display: block;
         width: 100%;
         height: $border_b02;
