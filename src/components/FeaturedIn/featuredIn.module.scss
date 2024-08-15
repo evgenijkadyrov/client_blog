@@ -1,15 +1,14 @@
 @import "src/styles/colors";
 @import "src/styles/sizes";
+
 .logos {
     padding: $padding_p32 0 $padding_p96;
-
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 
     &Title {
         margin-right: $margin_m85;
-
         color: $light-grey;
 
         @media screen and (max-width: 1350px) {

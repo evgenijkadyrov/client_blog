@@ -21,6 +21,8 @@ import styles from "./postedFiltered.module.scss";
 interface PostsFilteredProps {
     posts: PostsProps[];
 }
+const POSTS_MESSAGE = "Posts not found";
+
 export const PostsFiltered = ({ posts }: PostsFilteredProps) => {
     const t = useTranslations("HomeHero");
     const [value, setValue] = useState<string>("");
@@ -59,7 +61,7 @@ export const PostsFiltered = ({ posts }: PostsFilteredProps) => {
     return (
         <div className={styles.wrapper}>
             {filteredPosts.length === 0 ? (
-                <div>Posts not found</div>
+                <div>{POSTS_MESSAGE}</div>
             ) : (
                 <div>
                     {filteredPosts.map((post) => (

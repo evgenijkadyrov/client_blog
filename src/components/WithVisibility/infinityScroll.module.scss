@@ -1,15 +1,19 @@
+@import 'src/styles/sizes';
+$blur:16px;
+$transform:20px;
+
 .item {
     transition: opacity 0.5s linear;
 
     &Visible {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
         filter: blur(0);
     }
 
     &NotVisible {
         opacity: 0;
-        transform: translateX(-20px);
-        filter: blur(16px);
+        transform: translateX(-$transform);
+        filter: blur($blur);
     }
 }

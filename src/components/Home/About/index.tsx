@@ -38,7 +38,7 @@ export const AboutUs = async () => {
                         </p>
                     </article>
                 </div>
-                <Link href={`${AppRoutes.ABOUT}`} className={styles.aboutLink}>
+                <Link href={AppRoutes.ABOUT} className={styles.aboutLink}>
                     {t("AboutUs.linkText")}
                 </Link>
             </section>

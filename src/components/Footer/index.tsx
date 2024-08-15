@@ -14,6 +14,7 @@ import styles from "./footer.module.scss";
 export const Footer = async () => {
     const t = await getTranslations("Footer");
     const locale = await getLocale();
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footerWrapper}>

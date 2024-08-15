@@ -35,7 +35,7 @@ export const NavPanel = ({ full }: NavPanelProps) => {
 
     return (
         <div className={styles.row}>
-            <Link href={`/${AppRoutes.HOME}`} className={styles.homeLink}>
+            <Link href={AppRoutes.HOME} className={styles.homeLink}>
                 {t("appName")}
             </Link>
 

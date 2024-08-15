@@ -34,7 +34,7 @@ export const Search = ({ setInputValue, placeholderText }: SearchProps) => {
 
     const getTagsListFromObject = <T extends { title: string }>(
         array: T[]
-    ): string[] => array.map((el) => el.title);
+    ): string[] => array.map(({ title }) => title);
     const filteredSymbols = getFilteredSymbols(
         getTagsListFromObject(TAGS),
         value
