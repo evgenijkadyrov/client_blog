@@ -1,8 +1,8 @@
+@import "src/styles/sizes";
+
 .mapContainer {
-    height: 350px;
+    height: $height_h350;
     width: 100%;
-
     overflow: hidden;
-
     cursor: grab;
 }

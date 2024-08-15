@@ -24,6 +24,7 @@ const Page = async () => {
     const t = await getTranslations("HomeHero");
     const posts: PostsProps[] = (await getPosts()) as PostsProps[];
     const currentAuthors = getRandomElements(AUTHORS, POSTS_ON_BLOCK);
+
     return (
         <>
             <HomeHero />

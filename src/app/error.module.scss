@@ -1,18 +1,17 @@
 @import "src/styles/colors";
+@import "src/styles/sizes";
 
 .section {
-    padding: 64px 0;
+    padding: $padding_p60 0;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     color: $dark-blue;
 }
 
 .title {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: $margin_m20;
+    margin-bottom: $margin_m10;
 }

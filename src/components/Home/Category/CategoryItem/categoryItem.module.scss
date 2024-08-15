@@ -48,9 +48,9 @@
     }
     &Short {
         flex-direction: row;
-        height: 96px;
+        height: $height_h100;
         padding: $padding_p32;
-        gap: 16px;
+        gap: $gap_g15;
         align-items: center;
     }
 }

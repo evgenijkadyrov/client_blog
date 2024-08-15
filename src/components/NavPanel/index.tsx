@@ -35,16 +35,19 @@ export const NavPanel = ({ full }: NavPanelProps) => {
 
     return (
         <div className={styles.row}>
-            <Link href={`/${AppRoutes.HOME}`} className={styles.homeLink}>
+            <Link href={AppRoutes.HOME} className={styles.homeLink}>
                 {t("appName")}
             </Link>
 
-            {/* <input id="menuToggle" type="checkbox"/> */}
-            {/* <label */}
-            {/*    className={classNames(styles.menuBtn, full && styles.menuBtnFull)} */}
-            {/*    htmlFor="menuToggle"> */}
-            {/*    <span/> */}
-            {/* </label> */}
+            <input id={styles.menuToggle} type="checkbox" name="burger" />
+            <label
+                className={classNames(
+                    styles.menuBtn,
+                    full && styles.menuBtnFull
+                )}
+                htmlFor={styles.menuToggle}>
+                <span />
+            </label>
             <nav className={classNames(styles.nav, full && styles.navFull)}>
                 {renderNav()}
             </nav>

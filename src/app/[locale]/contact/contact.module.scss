@@ -1,21 +1,20 @@
 @import "src/styles/colors";
+@import "src/styles/sizes";
+
 .top {
-    padding: 64px 0 64px;
+    padding: $padding_p64 0 $padding_p64;
     max-width: 768px;
     margin: 0 auto;
-
     text-align: center;
 
     &SupTitle {
-        margin-bottom: 12px;
-
-        font-weight: 500;
-
+        margin-bottom: $margin_m10;
+        font-weight: $fontWeight_500;
         text-transform: uppercase;
     }
 
     &Title {
-        margin-bottom: 24px;
+        margin-bottom: $margin_m24;
     }
 
     &Text {
@@ -24,10 +23,9 @@
 }
 
 .formHeader {
-    padding: 48px 64px;
-    margin: 0 auto 32px;
+    padding: $padding_p50 $padding_p64;
+    margin: 0 auto $margin_m30;
     max-width: 768px;
-
     background-color: $purple;
     color: $white;
 
@@ -37,14 +35,13 @@
 
         @media screen and (max-width: 550px) {
             flex-direction: column;
-            gap: 30px;
+            gap: $gap_g32;
         }
     }
 
     &Block {
-        margin-right: 40px;
+        margin-right: $margin_m30;
         width: 50%;
-
         text-align: left;
 
         &:last-child {
@@ -57,14 +54,14 @@
     }
 
     @media screen and (max-width: 450px) {
-        padding: 48px 10px;
+        padding: $padding_p50 $padding_p08;
     }
 }
 
 .blockHeader {
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid $light-grey;
+    padding-bottom: $padding_p14;
+    margin-bottom: $padding_p14;
+    border-bottom: $border_b01 solid $light-grey;
 }
 
 .blockText {
