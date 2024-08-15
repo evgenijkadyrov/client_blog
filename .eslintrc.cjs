@@ -73,7 +73,7 @@ module.exports = {
         ],
       },
     ],
-
+    "jsx-a11y/label-has-associated-control": "off",
     "react/react-in-jsx-scope": "off",
     "simple-import-sort/exports": "error",
     "import/first": "error",

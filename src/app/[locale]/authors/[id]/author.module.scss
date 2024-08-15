@@ -1,12 +1,15 @@
 @import "src/styles/colors";
+@import "src/styles/sizes";
 
 .top {
     position: relative;
     background-color: $extra-light-purple;
+
     &Content {
     }
+
     &Inner {
-        padding: 128px 280px 128px 208px;
+        padding: $padding_p128 $padding_p280 $padding_p128 $padding_p200;
 
         display: flex;
         align-items: center;
@@ -14,32 +17,32 @@
 
         @media screen and (max-width: 1000px) {
             flex-direction: column;
-            padding: 128px 80px;
+            padding: $padding_p128 $padding_p80;
         }
 
         @media screen and (max-width: 475px) {
-            padding: 128px 40px;
+            padding: $padding_p128 $padding_p40;
         }
     }
 
     &Image {
-        width: 250px;
-        height: 250px;
-        padding-right: 30px;
+        width: $width_w250;
+        height: $height_h250;
+        padding-right: $padding_p32;
 
         @media screen and (max-width: 350px) {
             padding-right: 0;
-            width: 150px;
-            height: 150px;
+            width: $width_w150;
+            height: $height_h150;
         }
     }
 
     &Title {
-        margin-bottom: 25px;
+        margin-bottom: $margin_m24;
     }
 
     &Text {
-        margin-bottom: 25px;
+        margin-bottom: $margin_m24;
     }
 }
 
@@ -48,7 +51,7 @@
     bottom: 0;
     left: 35%;
 
-    height: 20px;
+    height: $height_h20;
     max-width: 1024px;
     width: 100%;
 
@@ -73,7 +76,7 @@
 
 .socials {
     a {
-        margin-right: 15px;
+        margin-right: $margin_m24;
 
         &:last-child {
             margin-right: 0;
@@ -82,17 +85,17 @@
 }
 
 .posts {
-    padding-top: 64px;
-    padding-left: 128px;
+    padding-top: $padding_p64;
+    padding-left: $padding_p128;
 
     &Title,
     &SecondTitle {
-        margin-bottom: 64px;
+        margin-bottom: $margin_m64;
     }
 
     &Row {
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: $gap_g60;
     }
 }

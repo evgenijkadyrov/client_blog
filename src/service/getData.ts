@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3002";
+const baseURL = "https://blog-server-eight-theta.vercel.app";
 export const getPosts = async (): Promise<unknown> => {
     const res = await fetch(`${baseURL}/posts`, { cache: "no-store" });
     if (!res.ok) {

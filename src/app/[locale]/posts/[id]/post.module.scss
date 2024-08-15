@@ -1,18 +1,20 @@
 @import "src/styles/colors";
+@import "src/styles/sizes";
+
 .content {
-    max-width: 850px;
+    max-width: $width_w850;
     margin: 0 auto;
-    padding: 64px 0 64px;
+    padding: $padding_p64 0 $padding_p64;
 
     &Wrapper {
         position: relative;
-        width: 490px;
-        height: 320px;
-        margin-bottom: 64px;
+        width: $width_w500;
+        height: $height_h320;
+        margin-bottom: $margin_m32;
 
         @media screen and (max-width: 768px) {
-            width: 240px;
-            height: 160px;
+            width: $width_w250;
+            height: $height_h150;
         }
 
         &Image {
@@ -20,67 +22,64 @@
 
             @media screen and (max-width: 490px) {
                 width: 100%;
-                //height: 300px;
             }
         }
     }
 
     &Category {
-        margin-bottom: 16px;
+        margin-bottom: $margin_m15;
         display: flex;
         align-items: center;
 
         img {
-            margin-right: 15px;
+            margin-right: $margin_m15;
         }
     }
 
     @media screen and (max-width: 490px) {
-        padding-top: 64px;
+        padding-top: $padding_p64;
     }
 }
 
 .post {
-    margin-bottom: 48px;
+    margin-bottom: $margin_m48;
 
     &Title {
-        margin-bottom: 16px;
+        margin-bottom: $margin_m15;
     }
-    &Text {
-    }
+
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 .posts {
-    padding: 64px 0;
+    padding: $padding_p64 0;
 
     &Title {
-        padding-bottom: 64px;
+        padding-bottom: $padding_p64;
     }
 
     &Row {
         display: flex;
         align-items: flex-start;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: $gap_g20;
         justify-content: space-around;
     }
 }
 .authorItem {
     display: flex;
 
-    margin-bottom: 24px;
+    margin-bottom: $margin_m24;
     &Avatar {
-        margin-right: 16px;
-        width: 48px;
-        height: 48px;
+        margin-right: $margin_m15;
+        width: $width_w16;
+        height: $height_h16;
         border-radius: 50%;
     }
     &Info {
         display: flex;
-
         flex-direction: column;
         &Name {
             margin: 0;

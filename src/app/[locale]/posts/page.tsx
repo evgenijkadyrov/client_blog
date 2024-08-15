@@ -8,7 +8,7 @@ import { JoinUsHome } from "components/Home/JoinUs";
 import { Posts } from "components/Posts";
 
 import "styles/globals.scss";
-import styles from "./blog.module.scss";
+import styles from "./posts.module.scss";
 
 const Blog = async () => {
     const t = await getTranslations("Posts");

@@ -34,7 +34,6 @@ const Post = async ({ params: { id } }: PostProps) => {
                         src={AvatarDefault as string}
                         alt={author}
                         className={styles.authorItemAvatar}
-                        fill
                     />
                     <div className={styles.authorItemInfo}>
                         <h3 className={styles.authorItemInfoName}>{author}</h3>
@@ -45,7 +44,6 @@ const Post = async ({ params: { id } }: PostProps) => {
                 </div>
                 <h1>{title}</h1>
                 <div className={styles.contentCategory}>
-                    {/* <Image src={categoryInfo.icon} alt={categoryInfo.title} loading="lazy" /> */}
                     <h4>{category}</h4>
                 </div>
                 <div className={styles.contentWrapper}>
@@ -61,7 +59,7 @@ const Post = async ({ params: { id } }: PostProps) => {
                 {content.map(({ title, text, id }) => (
                     <article key={id} className={styles.post}>
                         <h2 className={styles.postTitle}>{title}</h2>
-                        <p className={styles.postText}>{text}</p>
+                        <p>{text}</p>
                     </article>
                 ))}
             </section>

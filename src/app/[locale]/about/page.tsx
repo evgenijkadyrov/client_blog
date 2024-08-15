@@ -22,10 +22,10 @@ const About = async () => {
             <section className={styles.top}>
                 <div className={styles.topHeaders}>
                     <h5 className={styles.topSubTitle}>{t("top.subTitle")}</h5>
-                    <h1 className={styles.topTitle}>{t("top.title")}</h1>
+                    <h1>{t("top.title")}</h1>
                 </div>
                 <div className={styles.topContent}>
-                    <p className={styles.topText}>{t("top.text")}</p>
+                    <p>{t("top.text")}</p>
                 </div>
             </section>
             <section className={styles.stats}>
@@ -41,15 +41,15 @@ const About = async () => {
                 <div className={styles.statsRow}>
                     <div className={styles.statsBlock}>
                         <h1 className={styles.statsTitle}>12+</h1>
-                        <p className={styles.statsText}>{t("stats.blogs")}</p>
+                        <p>{t("stats.blogs")}</p>
                     </div>
                     <div className={styles.statsBlock}>
                         <h1 className={styles.statsTitle}>18K+</h1>
-                        <p className={styles.statsText}>{t("stats.views")}</p>
+                        <p>{t("stats.views")}</p>
                     </div>
                     <div className={styles.statsBlock}>
                         <h1 className={styles.statsTitle}>30K+</h1>
-                        <p className={styles.statsText}>{t("stats.users")}</p>
+                        <p>{t("stats.users")}</p>
                     </div>
                 </div>
             </section>

@@ -62,7 +62,6 @@
 
 .heroLabel {
     margin-bottom: $margin_m24;
-
     font-weight: $fontWeight_500;
     letter-spacing: $letterSpacing_l02;
     text-transform: uppercase;
@@ -74,7 +73,6 @@
 
 .heroTitle {
     margin-bottom: $margin_m24;
-
     font-size: $fontSize_f56;
 
     @media screen and (max-width: 650px) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { Button } from "components/Button";
@@ -11,7 +11,7 @@ interface ErrorProps {
     error: Error & { digest?: string };
 }
 
-const Error: FC<ErrorProps> = ({ error }) => {
+const Error = ({ error }: ErrorProps) => {
     useEffect(() => {
         console.error(error);
     }, [error]);

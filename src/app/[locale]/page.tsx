@@ -4,7 +4,6 @@ import { getRandomElements } from "helpers/randomAuthorList";
 import { getTranslations } from "next-intl/server";
 import { getPosts } from "service/getData";
 
-import Container from "components/Container";
 import FeaturedIn from "components/FeaturedIn";
 import { AboutUs } from "components/Home/About";
 import { AuthorsBlock } from "components/Home/Authors";
@@ -19,55 +18,40 @@ import { WithVisibility } from "components/WithVisibility";
 import "styles/globals.scss";
 import styles from "./home.module.scss";
 
+const POSTS_ON_BLOCK = 4;
+
 const Page = async () => {
     const t = await getTranslations("HomeHero");
     const posts: PostsProps[] = (await getPosts()) as PostsProps[];
-    const currentAuthors = getRandomElements(AUTHORS, 4);
+    const currentAuthors = getRandomElements(AUTHORS, POSTS_ON_BLOCK);
+
     return (
         <>
             <HomeHero />
             <WithVisibility>
-                <Container>
-                    <FeaturedPosts posts={posts} />
-                </Container>
+                <FeaturedPosts posts={posts} />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <AboutUs />
-                </Container>
+                <AboutUs />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <h2 className={styles.categoryTitle}>
-                        {t("Category.title")}
-                    </h2>
-                    <CategoryHome />
-                </Container>
+                <h2 className={styles.categoryTitle}>{t("Category.title")}</h2>
+                <CategoryHome />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <SpecialPost />
-                </Container>
+                <SpecialPost />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <AuthorsBlock authors={currentAuthors} />
-                </Container>
+                <AuthorsBlock authors={currentAuthors} />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <FeaturedIn />
-                </Container>
+                <FeaturedIn />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <Testimonials />
-                </Container>
+                <Testimonials />
             </WithVisibility>
             <WithVisibility>
-                <Container>
-                    <JoinUsHome />
-                </Container>
+                <JoinUsHome />
             </WithVisibility>
         </>
     );
