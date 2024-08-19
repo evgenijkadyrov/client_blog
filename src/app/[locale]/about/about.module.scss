@@ -9,7 +9,6 @@
 
     &Headers {
         max-width: $width_w630;
-        padding: $padding_p60;
         margin-right: $padding_p32;
 
         @media screen and (max-width: 550px) {
@@ -32,12 +31,18 @@
         @media screen and (max-width: 650px) {
             margin-bottom: $margin_m30;
         }
+        @media screen and (max-width: 550px) {
+            margin-bottom: $margin_m10;
+        }
     }
 
     @media screen and (max-width: 880px) {
         flex-direction: column;
         justify-content: flex-start;
         gap: $gap_g32;
+    }
+    @media screen and (max-width: 550px) {
+        gap: $gap_g15;
     }
 }
 
@@ -46,6 +51,9 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
     &Row {
         position: absolute;
         bottom: $position_p30;
@@ -93,14 +101,14 @@
         font-size: 56px;
 
         @media screen and (max-width: 880px) {
-            font-size: 45px;
+            font-size: 35px;
         }
     }
 
     &Image {
         max-width: 100%;
 
-        @media screen and (max-width: 490px) {
+        @media screen and (max-width: 590px) {
             height: 350px;
         }
     }
