@@ -17,5 +17,7 @@
     }
 }
 .error {
+    position: relative;
+    top: -$margin_m15;
     color: $red;
 }

@@ -25,6 +25,7 @@ type FormData = {
 export const ContactForm = () => {
     const t = useTranslations("ContactPage");
     const [showNotification, setShowNotification] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     const {
         register,
         handleSubmit,
@@ -37,7 +38,7 @@ export const ContactForm = () => {
         const service = ENV_VARS.EMAILJS_SERVICE || "";
         const template = ENV_VARS.EMAILJS_CONTACT_TEMPLATE || "";
         const key = ENV_VARS.EMAILJS_PUBLIC_KEY || "";
-
+        setIsLoading(true);
         try {
             emailjs
                 .send(
@@ -51,10 +52,12 @@ export const ContactForm = () => {
                     },
                     key
                 )
+
                 .then((result) => {
                     reset();
                     if (result.text === "OK") {
                         setShowNotification("Message sent");
+                        setIsLoading(false);
                     }
                 })
                 .catch((reason) => {
@@ -111,7 +114,7 @@ export const ContactForm = () => {
                         bgcolor="yellow"
                         size="full"
                         disabled={!isValid}>
-                        {t("form.button")}
+                        {isLoading ? <p>Loading</p> : t("form.button")}
                     </Button>
                 </form>
                 {showNotification && <h5>{showNotification}</h5>}
