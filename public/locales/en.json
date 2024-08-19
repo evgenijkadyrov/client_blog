@@ -50,22 +50,22 @@
       "searchButton": "Search",
       "Cards": {
         "business": {
-          "icon": "/business.svg",
+          "icon": "icons/business.svg",
           "title": "Business",
           "description": "Explore the latest trends and strategies in the world of business, from management insights to entrepreneurial success stories."
         },
         "startUp": {
-          "icon": "/startup.svg",
+          "icon": "icons/startup.svg",
           "title": "Startup",
           "description": "Learn how to navigate the challenges and opportunities of launching and growing a startup, with tips from industry experts and successful entrepreneurs."
         },
         "economy": {
-          "icon": "/economy.svg",
+          "icon": "/icons/economy.svg",
           "title": "Economy",
           "description": "Stay informed on global economic trends, financial markets, and key indicators affecting businesses and consumers worldwide."
         },
         "technology": {
-          "icon": "/technology.svg",
+          "icon": "icons/technology.svg",
           "title": "Technology",
           "description": "Discover cutting-edge innovations, tech trends, and the impact of technology on society in this dynamic and ever-evolving digital age."
         }
