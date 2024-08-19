@@ -1,13 +1,9 @@
-import { forwardRef, PropsWithRef } from "react";
+import { forwardRef } from "react";
 import classNames from "classnames";
 
-import styles from "./input.module.scss";
-import IntrinsicElements = React.JSX.IntrinsicElements;
+import { InputProps } from "./input.interface";
 
-interface InputProps extends PropsWithRef<IntrinsicElements["input"]> {
-    className?: string;
-    errorMessage?: string | undefined;
-}
+import styles from "./input.module.scss";
 
 export const CustomInput = forwardRef<HTMLInputElement, InputProps>(
     ({ className, errorMessage, ...props }, ref) => {

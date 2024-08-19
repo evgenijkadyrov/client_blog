@@ -3,7 +3,7 @@
 import { AppRoutes } from "constants/routerPath";
 import Link from "next/link";
 
-import { Button } from "components/Button";
+import { Button } from "components/ui/Button";
 
 import styles from "./notFound.module.scss";
 

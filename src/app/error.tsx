@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-import { Button } from "components/Button";
+import { Button } from "components/ui/Button";
 
 import styles from "./error.module.scss";
 

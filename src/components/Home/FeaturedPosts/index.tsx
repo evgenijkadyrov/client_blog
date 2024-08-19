@@ -4,8 +4,8 @@ import { getRandomElements } from "helpers/randomAuthorList";
 import { Link } from "navigation";
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "components/Button";
 import { PostLink } from "components/PostLink";
+import { Button } from "components/ui/Button";
 
 import styles from "./featuredPosts.module.scss";
 

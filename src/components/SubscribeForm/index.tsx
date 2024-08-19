@@ -4,8 +4,8 @@ import { SyntheticEvent, useState } from "react";
 import { useTranslations } from "next-intl";
 import { subscribeFormSchema } from "validations/emailShema";
 
-import { Button } from "components/Button";
-import { CustomInput } from "components/Input";
+import { Button } from "components/ui/Button";
+import { CustomInput } from "components/ui/Input";
 
 import styles from "./subscribeForm.module.scss";
 

@@ -9,10 +9,10 @@ import { FORM_QUERY } from "constants/formQuery";
 import { useTranslations } from "next-intl";
 import { contactFormSchema } from "validations/contactFormSchema";
 
-import { Button } from "components/Button";
-import { CustomInput } from "components/Input";
-import { CustomSelect } from "components/Select";
-import { CustomTextArea } from "components/TextArea";
+import { Button } from "components/ui/Button";
+import { CustomInput } from "components/ui/Input";
+import { CustomSelect } from "components/ui/Select";
+import { CustomTextArea } from "components/ui/TextArea";
 
 import styles from "./contactForm.module.scss";
 
