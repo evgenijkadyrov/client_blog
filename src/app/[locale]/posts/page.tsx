@@ -2,10 +2,10 @@ import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "components/Button";
 import { CategoryHome } from "components/Home/Category";
 import { JoinUsHome } from "components/Home/JoinUs";
 import { Posts } from "components/Posts";
+import { Button } from "components/ui/Button";
 
 import "styles/globals.scss";
 import styles from "./posts.module.scss";

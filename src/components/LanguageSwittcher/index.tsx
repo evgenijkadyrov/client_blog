@@ -1,7 +1,7 @@
 "use client";
 
-import {ChangeEvent, ReactNode, useTransition} from "react";
-import {usePathname, useRouter} from "navigation";
+import { ChangeEvent, ReactNode, useTransition } from "react";
+import { usePathname, useRouter } from "navigation";
 
 import styles from "./language.module.scss";
 
@@ -12,10 +12,10 @@ interface LocaleSwitcherProps {
 }
 
 export const LocaleSwitcherSelect = ({
-                                         children,
-                                         defaultValue,
-                                         label,
-                                     }: LocaleSwitcherProps) => {
+    children,
+    defaultValue,
+    label,
+}: LocaleSwitcherProps) => {
     const router = useRouter();
     const [isPending, startTransition] = useTransition();
     const pathname = usePathname();
@@ -23,10 +23,7 @@ export const LocaleSwitcherSelect = ({
     function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
         const nextLocale = event.target.value as "en" | "be" | undefined;
         startTransition(() => {
-            router.replace(
-                {pathname},
-                {locale: nextLocale}
-            );
+            router.replace({ pathname }, { locale: nextLocale });
         });
     }
 

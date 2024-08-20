@@ -19,6 +19,14 @@
         height: $height_h500;
         background-color: $white;
         z-index: 5;
+        @media screen and (max-width: 1024px) {
+            width: 75vw;
+            height: 45vh;
+        }
+        @media screen and (max-width: 768px) {
+            width: 45vw;
+            height: 35vh;
+        }
     }
 
     &Background {

@@ -3,7 +3,7 @@ import { AppRoutes } from "constants/routerPath";
 import { Link } from "navigation";
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "components/Button";
+import { Button } from "components/ui/Button";
 
 import styles from "./specialPost.module.scss";
 

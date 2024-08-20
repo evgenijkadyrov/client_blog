@@ -11,6 +11,11 @@
         flex-direction: column;
         align-items: center;
     }
+    @media screen and (max-width: 768px) {
+        padding: $padding_p14 0 $padding_p14;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .featuredPost {
@@ -56,6 +61,7 @@
         margin-bottom: $margin_m32;
         @media screen and (max-width: 768px) {
             max-width: $width_w450;
+            margin-bottom: $margin_m15;
         }
     }
 
@@ -69,18 +75,25 @@
         background-repeat: no-repeat;
 
         @media screen and (max-width: 768px) {
-            height: 70%;
+            width: $width_w500;
+            height: $height_h250;
         }
         @media screen and (max-width: 568px) {
-            height: 60%;
+            width: $width_w400;
+            height: $height_h200;
+            margin: $margin_m15;
         }
         @media screen and (max-width: 480px) {
-            height: 50%;
+            width: $width_w260;
+            height: $height_h150;
         }
     }
 
     @media screen and (max-width: 1150px) {
         margin-bottom: 30px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 10px;
     }
 }
 .allPosts {

@@ -55,7 +55,7 @@ module.exports = {
     ],
     "react-refresh/only-export-components": "off",
     "react/button-has-type": "off",
-    "react/jsx-props-no-spreading": "off",
+    "react/jsx-props-no-spreading": "warn",
     "react-hooks/exhaustive-deps": "off",
     "no-floating-promise/no-floating-promise": "off",
     "@typescript-eslint/no-floating-promises": "off",

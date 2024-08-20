@@ -1,14 +1,9 @@
-import { FC, forwardRef, SelectHTMLAttributes } from "react";
+import { FC, forwardRef } from "react";
 import classNames from "classnames";
 
-import styles from "./select.module.scss";
+import { CustomSelectProps } from "components/ui/Select/select.interface";
 
-interface CustomSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-    name: string;
-    label: string;
-    options: { value: string; label: string }[];
-    errorMessage?: string | undefined;
-}
+import styles from "./select.module.scss";
 
 export const CustomSelect: FC<CustomSelectProps> = forwardRef<
     HTMLSelectElement,

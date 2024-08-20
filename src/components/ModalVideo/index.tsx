@@ -1,13 +1,15 @@
 "use client";
 
-import { KeyboardEvent, useState } from "react";
+import { KeyboardEvent, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Button } from "components/Button";
+import { Button } from "components/ui/Button";
 
 import "styles/colors.scss";
 import styles from "./modalVideo.module.scss";
 
+const URL_VIDEO =
+    "https://www.youtube.com/embed/1rRD9uMF92o?si=HEq8w_N9KUgPsglo";
 export const ModalVideo = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const t = useTranslations("ModalVideo");
@@ -17,9 +19,21 @@ export const ModalVideo = () => {
     };
     const handleKeyPress = (event: KeyboardEvent) => {
         if (event.key === "Escape") {
-            handleClick();
+            setIsModalOpen(false);
         }
     };
+
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isModalOpen]);
     return (
         <>
             <div className={styles.button}>
@@ -39,10 +53,10 @@ export const ModalVideo = () => {
                     className={styles.modalWrapper}>
                     <div className={styles.modalContent}>
                         <iframe
-                            width="850"
-                            height="500"
+                            width="100%"
+                            height="100%"
                             aria-label="Embedded YouTube Video"
-                            src="https://www.youtube.com/embed/1rRD9uMF92o?si=HEq8w_N9KUgPsglo"
+                            src={URL_VIDEO}
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
