@@ -9,6 +9,9 @@
     @media screen and (max-width: 1280px) {
         flex-wrap: wrap;
     }
+    @media screen and (max-width: 768px) {
+        padding: $padding_p14 0;
+    }
 
     &Content {
         position: absolute;

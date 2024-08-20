@@ -1,13 +1,9 @@
-import { FC, forwardRef, TextareaHTMLAttributes } from "react";
+import { FC, forwardRef } from "react";
 import classNames from "classnames";
 
-import styles from "./textarea.module.scss";
+import { CustomTextAreaProps } from "./textarea.interface";
 
-interface CustomTextAreaProps
-    extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-    className?: string;
-    errorMessage?: string | undefined;
-}
+import styles from "./textarea.module.scss";
 
 export const CustomTextArea: FC<CustomTextAreaProps> = forwardRef<
     HTMLTextAreaElement,

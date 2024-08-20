@@ -1,5 +1,5 @@
-@import "src/styles/sizes";
-@import "src/styles/colors";
+@import "../../../styles/sizes";
+@import "../../../styles/colors";
 
 .input {
     height: $height_h56;
@@ -17,5 +17,7 @@
     }
 }
 .error {
+    position: relative;
+    top: -$margin_m15;
     color: $red;
 }

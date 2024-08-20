@@ -1,4 +1,10 @@
 @import "src/styles/sizes";
 .container {
     margin: $margin_m64 $margin_m80;
+    @media screen and (max-width: 1150px) {
+        margin: $margin_m32 $margin_m40;
+    }
+    @media screen and (max-width: 768px) {
+        margin: $margin_m15 $margin_m20;
+    }
 }
